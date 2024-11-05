@@ -8,7 +8,7 @@
     --font2: "Roboto Slab", serif;
 }
 
-.page1 {
+body{
     font-family: "Press Start 2P", system-ui;
     text-decoration: none;
     background-color: #000000;
@@ -49,7 +49,7 @@ h3{
 
 }
 
-.page1{
+body{
     background-image:url(images/borneretro.png);
     background-size: cover;
     background-position: center;
