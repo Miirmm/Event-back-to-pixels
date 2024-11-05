@@ -8,11 +8,12 @@
     --font2: "Roboto Slab", serif;
 }
 
-body {
+.page1 {
     font-family: "Press Start 2P", system-ui;
     text-decoration: none;
     background-color: #000000;
     color: #ffffff;
+
 }
 
 img {
@@ -20,8 +21,7 @@ img {
     height: 250px;
     object-fit: cover;
 }
-
-a {
+.img{
     text-decoration: none;
     color: #ffffff;
     margin: 10px;
@@ -48,4 +48,15 @@ h3{
 
 
 }
+
+.page1{
+    background-image:url(images/borneretro.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+
 
