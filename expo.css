@@ -10,6 +10,7 @@
 *{
     font-family: var(--font2);
     color: var(--text);
+    word-wrap: anywhere;
 }
 .all{
     margin-left: 2rem;
@@ -25,6 +26,7 @@ h1{
     font-size: 1.5rem;
     font-family: var(--titre);
     margin-bottom: 5rem;
+    word-wrap: anywhere;
 }
 .banner-expo-img{
     width: 70%;
@@ -43,6 +45,7 @@ bouton
 #expo-inscription h2{
     font-family: var(--titre);
     text-align: left;
+    word-wrap: anywhere;
 }
 #contact p{
     text-align: left;
@@ -55,6 +58,8 @@ bouton
     border-width: 5px;
     width: 150px;
     height: 50px;
+    max-width: fit-content;
+
     background-color: var(--primary);
     color: white;
 }
@@ -141,8 +146,16 @@ bouton
     color: white;
     border-color: var(--secondary);
 }
-
-
+/***************************************************************************
+Les consoles présentées
+*/
+.consoles-presentes h2{
+    font-family: var(--titre);
+    margin-left: 2rem;
+}
+.grid-console{
+    display: flex;
+}
 /**************************************************************************
  responsive
  */

@@ -1,11 +1,11 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Exposition de Consoles Rétro</title>
-    <link rel="stylesheet" href="expo.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="expo.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
     <link
             href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
             rel="stylesheet"
@@ -16,45 +16,56 @@
 </head>
 <body>
 <section class="all">
-<section>
-    <h1>Exposition de consoles rétro</h1>
-    <img class="banner-expo-img" src="images/expo-banner.jpg" alt="">
-    <section id="expo-inscription">
-        <h2>Inscrivez vous</h2>
-        <div id="contact">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut doloribus eos porro qui quis reiciendis repudiandae soluta unde. Animi deleniti, error eveniet non quia rerum similique unde voluptate voluptates?
-            </p>
+    <section>
+        <h1>Exposition de consoles rétro</h1>
+        <img alt="" class="banner-expo-img" src="images/images/expo-banner.jpg.jpg">
+        <section id="expo-inscription">
+            <h2>Inscrivez vous</h2>
+            <div id="contact">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut doloribus eos porro qui
+                    quis reiciendis repudiandae soluta unde. Animi deleniti, error eveniet non quia rerum similique unde
+                    voluptate voluptates?
+                </p>
 
-            <a href="#popup">
-                <button type="button">Inscrivez vous</button>
-            </a>
-            <form class="form-expo" action="">
-                <div id="popup" class="popup01">
-                    <div class="popup_content">
-                        <h3>Contactez-moi</h3>
-                        <div>
-                            <label for="Prenom">Prénom :</label>
-                            <input type="text" name="Prenom" />
+                <a href="#popup">
+                    <button type="button">Inscrivez vous</button>
+                </a>
+                <form action="" class="form-expo">
+                    <div class="popup01" id="popup">
+                        <div class="popup_content">
+                            <h3>Contactez-moi</h3>
+                            <div>
+                                <label for="Prenom">Prénom :</label>
+                                <input name="Prenom" type="text"/>
+                            </div>
+                            <div>
+                                <label for="Nom">Nom :</label>
+                                <input name="Nom" type="text"/>
+                            </div>
+                            <div>
+                                <label for="Email">Email :</label>
+                                <input name="Email" type="email"/>
+                            </div>
+                            <div id="submit">
+                                <button type="submit">Envoyer</button>
+                            </div>
+                            <a class="popup_close" href="#">&times;</a>
                         </div>
-                        <div>
-                            <label for="Nom">Nom :</label>
-                            <input type="text" name="Nom" />
-                        </div>
-                        <div>
-                            <label for="Email">Email :</label>
-                            <input type="email" name="Email" />
-                        </div>
-                        <div id="submit">
-                            <button type="submit">Envoyer</button>
-                        </div>
-                        <a href="#" class="popup_close">&times;</a>
                     </div>
-                </div>
-            </form>
-        </div>
+                </form>
+            </div>
+        </section>
+        <section class="consoles-presentes">
+            <h2>Les consoles présentées</h2>
+            <div class="grid-console">
+                <div class="div-grid-console"></div>
+                <div class="div-grid-console"></div>
+                <div class="div-grid-console"></div>
+                <div class="div-grid-console"></div>
+            </div>
+        </section>
     </section>
-</section>
 </section>
 </body>
 </html>
