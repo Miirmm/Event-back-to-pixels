@@ -20,52 +20,9 @@ body {
 
 }
 
-.p-img{
-    text-align: center;
-    margin: auto;
-    display: block;
-}
 
-h2 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    color: var(--accent);
-    margin-bottom: 20px;
-    font-family: var(--titre);
-}
 
-.img-reparation {
-    width: 650px;
-    height: 300px;
-    object-fit: cover;
-    margin: auto;
-    display: block;
-}
 
-.img-customisation-manettes {
-    width: 650px;
-    height: 300px;
-    object-fit: cover;
-    margin: auto;
-    display: block;
-}
-
-.img-creation-pixels-art {
-    width: 650px;
-    height: 250px;
-    object-fit: cover;
-    margin: auto;
-    display: block;
-}
-
-.img-quizz {
-    width: 650px;
-    height: 300px;
-    object-fit: cover;
-    margin: auto;
-    display: block;
-}
 
 footer {
     background-color: #333;
@@ -143,55 +100,4 @@ footer {
 
 .footer-texte {
     font-family: "Roboto Light";
-}
-
-/*---responsive---*/
-
-@media screen and (min-width:1024px) {
-    #1 {
-        width: 90%;
-        height: 100%;
-    }
-}
-
-@media screen and (min-width:1024px) {
-    .img-reparation .img-customisation-manettes .img-creation-pixels-art .img-quizz {
-
-        max-width: 100%;
-        height: auto;
-
-
-    }
-}
-
-@media screen and (min-width:768px) {
-    #1 {
-        width: 90%;
-        height: 100%;
-    }
-}
-
-@media screen and (min-width:768px) {
-    .img-reparation .img-customisation-manettes .img-creation-pixels-art .img-quizz {
-
-        max-width: 100%;
-        height: auto;
-
-
-    }
-}
-
-@media screen and (min-width:0px) {
-    #1 {
-        width: 90%;
-        height: 100%;
-    }
-}
-
-@media screen and (min-width:0px) {
-    .img-reparation .img-customisation-manettes .img-creation-pixels-art .img-quizz {
-        max-width: 100%;
-        height: auto;
-    }
-
 }
