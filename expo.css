@@ -150,6 +150,9 @@ bouton
 /***************************************************************************
 Les consoles présentées
 */
+.consoles-presentes{
+    margin-top: 3rem;
+}
 .consoles-presentes h2{
     font-family: var(--titre);
     margin-left: 2rem;
@@ -172,6 +175,57 @@ Les consoles présentées
     object-fit: cover;
     width: 80%;
     height: 80%;
+}
+/**************************************************************************
+*/
+.section-jeux{
+    margin-top: 3rem;
+}
+.section-jeux h2{
+    margin-left: 2rem;
+    font-family: var(--titre);
+}
+.grid-jeux{
+    display: grid;
+    grid-template-columns: 40% 10% 40%;
+    grid-template-rows: 40% 10% 40%;
+    margin-top: 2rem;
+    justify-content: center;
+}
+.div-grid-jeux{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+#grid-jeux1{
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+#grid-jeux2{
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+#grid-jeux3{
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+#grid-jeux4{
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+.img-jeux-expo{
+    object-fit: cover;
+    width: 60%;
+    height: 60%;
+    margin: auto;
+    border-radius: 5%;
+}
+.div-grid-jeux h3{
+    font-family: var(--titre);
+    text-align: center;
+}
+.div-grid-jeux p{
+    text-align: center;
 }
 /**************************************************************************
  responsive
@@ -285,6 +339,7 @@ Les consoles présentées
         display: flex;
         flex-direction: column;
         max-width: 100%;
+        margin-bottom: 5rem;
 
     }
     .div-grid-console h3{
@@ -294,5 +349,18 @@ Les consoles présentées
         object-fit: cover;
         width: 80%;
         height: 80%;
+    }
+    /***********************************************************/
+    .grid-jeux{
+        display: flex;
+        margin-top: 2rem;
+        justify-content:space-between;
+        flex-direction: column;
+    }
+    .div-grid-jeux{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        margin-bottom: 5rem;
     }
 }
