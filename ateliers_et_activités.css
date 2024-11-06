@@ -10,8 +10,8 @@
 
 body {
     font-family: "Press Start 2P", system-ui;
-    color:var(--text);
-    background:var(--primary);
+    color: var(--text);
+    background: var(--primary);
 
 }
 
@@ -23,7 +23,11 @@ body {
     background-repeat: no-repeat;
 }
 
-
+.p-img{
+    text-align: center;
+    margin: auto;
+    display: block;
+}
 
 h2 {
     display: flex;
@@ -34,10 +38,36 @@ h2 {
     font-family: var(--titre);
 }
 
-.img-reparation{
+.img-reparation {
+    width: 650px;
+    height: 300px;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+}
+
+.img-customisation-manettes {
+    width: 650px;
+    height: 300px;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+}
+
+.img-creation-pixels-art {
     width: 650px;
     height: 250px;
-    object-fit:cover;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+}
+
+.img-quizz {
+    width: 650px;
+    height: 300px;
+    object-fit: cover;
+    margin: auto;
+    display: block;
 }
 
 footer {
@@ -120,56 +150,51 @@ footer {
 
 /*---responsive---*/
 
-@media screen and (min-width:1024px )
-{#1
-{
-    width: 90%;
-    height: 100%;
+@media screen and (min-width:1024px) {
+    #1 {
+        width: 90%;
+        height: 100%;
+    }
 }
-}
-@media screen and (min-width:1024px )
-{ .img-reparation
-{
+
+@media screen and (min-width:1024px) {
+    .img-reparation .img-customisation-manettes .img-creation-pixels-art .img-quizz {
 
         max-width: 100%;
         height: auto;
 
 
-}
-}
-
-@media screen and (min-width:768px  )
-{#1
-{
-    width: 90%;
-    height: 100%;
-}
+    }
 }
 
-@media screen and (min-width:768px  )
-{ .img-reparation
-{
-
-    max-width: 100%;
-    height: auto;
-
-
-}
+@media screen and (min-width:768px) {
+    #1 {
+        width: 90%;
+        height: 100%;
+    }
 }
 
-@media screen and (min-width:0px  )
-{#1
-{
-    width: 90%;
-    height: 100%;
-}
+@media screen and (min-width:768px) {
+    .img-reparation .img-customisation-manettes .img-creation-pixels-art .img-quizz {
+
+        max-width: 100%;
+        height: auto;
+
+
+    }
 }
 
-@media screen and (min-width:0px  )
-{ .img-reparation
-{
-    max-width: 100%;
-    height: auto;
+@media screen and (min-width:0px) {
+    #1 {
+        width: 90%;
+        height: 100%;
+    }
 }
+
+@media screen and (min-width:0px) {
+    .img-reparation .img-customisation-manettes .img-creation-pixels-art .img-quizz {
+        max-width: 100%;
+        height: auto;
+    }
 
 }
