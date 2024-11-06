@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Back to Pixel</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <a class="logo">
+          <img class="logo1" src="logo1.png" alt="" />
+          <p class="titre">Le Back-to-Pixel Festival</p>
+        </a>
+        <ul class="links">
+          <li><a href="#">Tournois</a></li>
+          <li><a href="#">Exposition de Consoles Rétro</a></li>
+          <li><a href="#">Histoire de Nintendo</a></li>
+          <li><a href="#">Rencontre avec Shigeru Miyamoto</a></li>
+
+          <ul class="liste-deroulante">
+            <li>
+              <a href="#">Autres ⬇</a>
+            </li>
+            <ul class="submenu">
+              <li><a href="#">Ateliers et Activités</a></li>
+              <li><a href="#">Programme du Festival</a></li>
+              <li><a href="#">Partenaires et Sponsors</a></li>
+              <li><a href="#">Boutique de produits Dérivés</a></li>
+              <li><a href="#">Presse et Média</a></li>
+            </ul>
+          </ul>
+        </ul>
+        <div class="burger-menu-button">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="burger-menu">
+        <ul class="links">
+          <li><a href="#">Tournois</a></li>
+          <li><a href="#">Exposition de Consoles Rétro</a></li>
+          <li><a href="#">Histoire de Nintendo</a></li>
+          <li><a href="#">Rencontre avec Shigeru Miyamoto</a></li>
+          <input type="checkbox" class="menuToggle" id="menu-toggle" />
+          <li><label for="menu-toggle">Autres</label></li>
+
+          <ul class="liste-deroulante">
+            <!-- <label for="#">Autres</label> -->
+
+            <li><a href="#">Ateliers et Activités</a></li>
+            <li><a href="#">Programme du Festival</a></li>
+            <li><a href="#">Partenaires et Sponsors</a></li>
+            <li><a href="#">Boutique de produits Dérivés</a></li>
+            <li><a href="#">Presse et Média</a></li>
+          </ul>
+          <div class="divider"></div>
+        </ul>
+      </div>
+      <div class="padding-pour-test"></div>
+    </header>
+
+    <!-- <main>
+      <section>
+        <img
+          id="boutique"
+          src="https://media.istockphoto.com/id/532571722/fr/photo/vue-depuis-le-pont-de-navigation-%C3%A0-la-terrasse.jpg?s=2048x2048&w=is&k=20&c=sZz3FD0qqkO-9YQUFhWJwgZniNosM221loLxdDrEoLg="
+        />
+        <h3 id="slogan">
+          <br /><br />
+          Retour aux classiques : le meilleur du gaming rétro vous attend !
+        </h3>
+        <br />
+      </section>
+      <div class="img">
+        <a href="tournoi.html">-->
+    <!-- le nom de la page tournois-->
+    <!-- <p>Tournois</p>
+          <img
+            src="https://media.istockphoto.com/id/1058737714/fr/photo/pont-%C3%A0-hong-kong-et-conteneur-cargo-navire-de-fret.jpg?s=2048x2048&w=is&k=20&c=YorDzjcR3y-4A0lx5qisC_BaoLCyUJVxG9q8YloJjCc="
+            target="_blank"
+          />
+        </a>
+
+        <a href="expo.html">-->
+    <!-- le nom de la page expo consoles-->
+    <!--<p>Exposition de Consoles Retro</p>
+          <img
+            src="https://media.istockphoto.com/id/1266114456/fr/photo/pont-int%C3%A9rieur-du-navire-siem-amethyst-offshore-op%C3%A9ration-de-manutention-dancrage-offshore.jpg?s=2048x2048&w=is&k=20&c=fsif41f0bLG9qXmoMKdyuKZH_8YuJ_hJtZdIeNGb2WI="
+            target="_blank"
+          />
+        </a>
+
+        <a href=""> -->
+    <!-- le nom de la page histoire nintendo-->
+    <!--<p>Histoire de Nintendo</p>
+          <img src="images/histoirenin.png" target="_blank" />
+        </a>
+
+        <a href=""> -->
+    <!-- le nom de la page rencontre avec miyamoto-->
+    <!--- <p>Rencontre avec Shigeru Miyamoto</p>
+          <img src="images/miyamoto.jpg" target="_blank" />
+        </a>
+      </div>
+    </main> -->
+
+    <script>
+      const burgerMenuButton = document.querySelector(".burger-menu-button");
+      const burgerMenuButtonIcon = document.querySelector(
+        ".burger-menu-button i"
+      );
+      const burgerMenu = document.querySelector(".burger-menu");
+
+      burgerMenuButton.onclick = function () {
+        burgerMenu.classList.toggle("open");
+        const isOpen = burgerMenu.classList.contains("open");
+        burgerMenuButtonIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+      const autreBtn = document.querySelector(".menuToggle");
+      autreBtn.onclick = function () {
+        // autreBtn.classList.toggle("visible");
+        document.querySelector(".open").style.height = "600px";
+      };
+    </script>
+
+    <footer class="example-1">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4>Lieu</h4>
+          <br />
+          <p>Voici l'adresse pour nous rejoindres :</p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2594.293122449874!2d1.1008915125892296!3d49.441176671297946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e0df1548cd768b%3A0x70b4b34959b1ec9f!2sNeed%20for%20School!5e0!3m2!1sfr!2sfr!4v1730827755843!5m2!1sfr!2sfr"
+            width="400"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="footer-col">
+          <h4>Contact options</h4>
+          <br />
+
+          <p>
+            Email :
+            <a href="super.email@example.com">super.email@example.com</a>
+          </p>
+          <br />
+          <p>Telephone <a href="tel:+31 0605050606">+33 0605050606</a></p>
+          <br />
+          <p>
+            <!-- <img class="taille-icon" src="icon-facebook.png" /> -->
+            Notre Facebook
+          </p>
+          <br />
+          <p>
+            <!-- <img class="taille-icon" src="icon-instagram.png" /> -->
+            Notre Instagram
+          </p>
+          <br />
+          <p>
+            <!-- <img class="taille-icon" src="icon-instagram.png" /> -->
+            Notre Linkedin
+          </p>
+          <br />
+          <p>
+            <!-- <img class="taille-icon" src="icon-instagram.png" /> -->
+            Notre Twitter
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Sitemap</h4>
+          <br />
+          <nav>
+            <ul>
+              <li><a href="#">Tournois</a></li>
+              <br />
+              <li><a href="#">Exposition de Consoles Rétro</a></li>
+              <br />
+              <li><a href="#">Histoire de Nintendo</a></li>
+              <br />
+              <li><a href="#">Rencontre avec Shigeru Miyamoto</a></li>
+              <br />
+              <li><a href="#">Atelirers et Activités</a></li>
+              <br />
+              <li><a href="#">Programme du Festival</a></li>
+              <br />
+              <li><a href="#">Partenaires et Sponsors</a></li>
+              <br />
+              <li><a href="#">Boutique de Produits Dérivés</a></li>
+              <br />
+              <li><a href="#">Accréditations Presse et Médias</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="bottombar">Copyright © 2024 - Back to Pixels</div>
+    </footer>
+
+    <!-- <footer>
+      <div class="icon-reseaux">
+        <p>Company © 2024 - Back-to-Pixel</p>
+
+        <a href="#">
+          <img class="size-reseaux" src="icon-facebook.png" alt="" />
+        </a>
+        <a href="#">
+          <img class="size-reseaux" src="icon-instagram.png" />
+        </a>
+        <a href="#">
+          <img class="size-reseaux" src="" />
+        </a>
+        <div>
+          <p class="size-contact">: <a href="#"> adresse.email@gmail.com</a></p>
+        </div>
+      </div>
+    </footer> -->
+  </body>
+</html>

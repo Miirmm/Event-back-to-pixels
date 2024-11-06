@@ -17,6 +17,7 @@
     margin-right: 2rem;
     background-color: var(--background);
 }
+
 body{
     background: linear-gradient(rgb(0, 0, 0), var(--primary));
 }
@@ -155,6 +156,19 @@ Les consoles présentées
 }
 .grid-console{
     display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+.div-grid-console{
+    display: flex;
+    flex-direction: column;
+    max-width: 15%;
+}
+.div-grid-console h3{
+    font-family: var(--titre);
+}
+.img-console-expo{
+
 }
 /**************************************************************************
  responsive

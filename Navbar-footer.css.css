@@ -1,0 +1,469 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	.poppins-light {
+  	.poppins-regular {
+ 	 font-family: "Poppins", sans-serif;
+ 	 font-weight: 400;
+ 	 font-style: normal;
+}
+
+}
+
+}
+
+body {
+	height: 100vh;
+	/* background-image: url(https://media.istockphoto.com/id/532571722/fr/photo/vue-depuis-le-pont-de-navigation-%C3%A0-la-terrasse.jpg?s=2048x2048&w=is&k=20&c=sZz3FD0qqkO-9YQUFhWJwgZniNosM221loLxdDrEoLg=); */
+	background-color: #3989cb;
+	background-size: cover;
+	background-position: center;
+}
+
+nav {
+	scale: 2px;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo1 {
+	margin-right: 1em;
+	border-radius: 40% 00% 40% 00%;
+}
+
+img.logo1 {
+	width: 105px;
+	height: 105px;
+}
+
+
+li {
+	list-style: none;
+	/* border: 2px solid blue;
+	border-radius: 8%;
+	background-color: transparent rgba(0, 0, 0, 0.8); */
+	transition: 0.3s;
+	scale: 1;
+}
+
+ul .liste-deroulante {
+	text-align: center;
+	transition: 0.3s;
+	scale: 1;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.2rem;
+}
+
+a:hover {
+	color: #63C7B2;
+}
+
+header {
+	position: relative;
+	padding: 0 2rem;
+	background-color: rgba(0, 0, 0, 0.238);
+}
+
+.navbar{
+	width: 100%;
+	/* max-width: 1200px; */
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: 0.3s;
+	scale: 1;																
+}
+
+/* .logo1::selection {
+	background-color: yellow;
+	color: darkred;
+} */
+	
+.navbar .logo a {
+	font-size: 1.5rem;
+	font-weight: bold;
+
+}
+
+.navbar .links {
+	display: flex;
+	gap: 2rem;
+	
+}
+
+.navbar .burger-menu-button {
+	color: #fff;
+	font-size: 1.5rem;
+	cursor: pointer;
+	display: none;
+}
+
+.buttons {
+	display: flex;
+	gap: 10px;
+	
+}
+
+img.logo1 {
+	text-align: start;
+}
+
+ p.titre {
+	margin-right: 0px;
+}
+
+/*
+a .logo {
+	margin-right: 150px;
+} */
+
+.action-button {
+	background-color: #63C7B2;
+	color: #120d31;
+	border: 1px solid #63C7B2;
+	padding: 0.5rem 1.2rem;
+	border-radius: 5px;
+	outline: none;
+	font-size: 0.9rem;
+	font-weight: bold;
+	cursor: pointer;
+	margin-left: 180px;
+	
+}
+
+.action-button:hover {
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+.pro {
+	background-color: transparent;
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+.pro:hover {
+	background-color: #fff;
+	color: #120d31;
+}
+
+/* Liste déroulante de la catégorie Autres */
+
+.links {
+	text-align: center;
+}
+
+.liste-deroulante {
+	display: block;
+	position: relative;
+	padding-right: 50px;
+
+}
+
+.submenu {
+	display: none	;
+	padding-top: 20px;
+    position: absolute;	
+	color: transparent;
+    left: 0;
+    background-image: url(https://cdn.pixabay.com/photo/2021/12/29/14/47/water-6901805_1280.jpg);
+    list-style: none;
+	border: 3px ridge darkblue ;
+	border-radius: 5%;
+	background-position: 40% 50%;
+	transition: all 10 ease;
+    animation: scroll 10s linear alternate infinite;
+
+}
+
+@keyframes scroll{
+
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 100%;
+    }
+}
+
+.submenu li {
+	padding: 12px 12px 12px 12px;
+}
+
+
+
+.liste-deroulante:hover .submenu{
+	display: block;
+}
+
+/*burger menu*/
+
+.burger-menu {
+	display: none;
+	height: 0;
+	position: absolute;
+	right: 2rem;
+	top: 60px;
+	width: 200px;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(15px);
+	border-radius: 10px;
+	overflow: hidden;
+	transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.burger-menu.open {
+	height:380px;
+
+}
+
+.burger-menu li {
+	padding: 0.7rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.divider {
+	height: 1px;
+	background-color: #fff;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1rem;
+}
+
+.burger-menu .action-button {
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.buttons-burger-menu {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 990px) {
+	header {
+		background: none;
+	}
+
+	.navbar .links,
+	.navbar .action-button{
+		display: none;
+	}
+
+	.navbar .burger-menu-button {
+		display: block;
+	}
+
+	.burger-menu {
+		display: block;
+	}
+	#autres{
+		padding: 15px;
+		cursor: pointer;
+		border: none;
+	}
+	.liste-deroulante{
+		display: none;
+	}
+	#menu-toggle{
+		display: none;
+	}
+	#menu-toggle:checked ~.liste-deroulante{
+		display: block;
+	}
+}
+
+	
+
+
+
+
+
+
+	
+
+
+
+
+
+:root {
+		--text: rgb(1, 11, 38);
+		--background: rgb(250, 250, 255);
+		--primary: rgb(42, 76, 212);
+		--secondary: rgb(220, 30, 30);
+		--accent: rgb(123, 67, 249);
+		--titre: "Press Start 2P", system-ui;
+		--font2: "Roboto Slab", serif;
+	}
+	
+body {
+	font-family: "Press Start 2P", system-ui;
+	text-decoration: none;
+		background-color: #000000;
+		color: #ffffff;
+	
+}
+	
+	img {
+		width: 600px;
+		height: 250px;
+		object-fit: cover;
+	}
+	.img{
+		text-decoration: none;
+		color: #ffffff;
+		margin: 10px;
+	}
+	
+	li a {
+		margin: 5px;
+	}
+	
+	main a {
+		display: inline-block;
+		width: 47%;
+	}
+	
+	#boutique {
+		width: 100%;
+		height: 500px;
+		padding-top: 100px;
+	}
+h3{
+		display: flex;
+		justify-content: center;
+	
+	
+	
+	}
+	
+body{
+		
+		 background-image: url(https://media.istockphoto.com/id/532571722/fr/photo/vue-depuis-le-pont-de-navigation-%C3%A0-la-terrasse.jpg?s=2048x2048&w=is&k=20&c=sZz3FD0qqkO-9YQUFhWJwgZniNosM221loLxdDrEoLg=);
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+	}
+	
+.iii {
+	background-color: red;
+	font-size: 35px;
+}
+
+footer.example-1 {
+	font-family: Tahoma, sans-serif;
+	background-color: #193549;
+	padding: 90px 0 0;
+  }
+  footer.example-1 .footer-container {
+	max-width: 1200px;
+	margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+	footer.example-1 .footer-container {
+	  display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: flex;
+	  -webkit-box-pack: justify;
+		  -ms-flex-pack: justify;
+			  justify-content: space-between;
+	}
+  }
+  footer.example-1 .footer-container p, footer.example-1 .footer-container a, footer.example-1 .footer-container h4 {
+	color: #FFFFFF;
+  }
+  footer.example-1 .footer-container h4 {
+	margin: 0 0 10px;
+  }
+  footer.example-1 .footer-container p, footer.example-1 .footer-container a {
+	font-size: 16px;
+  }
+  footer.example-1 .footer-container img {
+	max-width: 200px;
+  }
+  footer.example-1 .footer-container .footer-col {
+	margin: 0 15px 60px;
+	padding: 30px;
+	border-radius: 4px;
+	background: #15232D;
+	-webkit-box-shadow: 2px 2px 2px #15232D;
+			box-shadow: 2px 2px 2px #15232D;
+	-webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+			box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+  }
+  @media (min-width: 768px) {
+	footer.example-1 .footer-container .footer-col {
+	  -ms-flex-preferred-size: 32%;
+		  flex-basis: 32%;
+	}
+  }
+  footer.example-1 .footer-container .footer-col ul li {
+	list-style: none;
+  }
+  footer.example-1 .bottombar {
+	padding: 20px 15px;
+	background-color: #070e14;
+	text-align: center;
+	font-style: italic;
+	color: #FFFFFF;
+	font-size: .9em;
+  }
+
+  .size-logo {
+	width: 100px;
+	height: 100px;
+  }
+
+.padding-pour-test {
+	margin-top: 1000px;
+}
+
+.taille-icon {
+	width: 50px;
+	height: 50px;
+}
+
+
+	
+
+
+/* footer{
+	background-color: grey;
+	height: 150px;
+	width: 100%;
+	margin-top: 27em;
+	color: yellow;
+	text-align: center;
+	font-size: 28px;
+	display: flex;
+	justify-content: center;
+}
+
+.size-reseaux {
+	width: 50px;
+	height: 50px;
+}
+
+.size-contact {
+
+} */
