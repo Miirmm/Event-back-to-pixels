@@ -1,0 +1,175 @@
+:root {
+    --background: rgb(1, 11, 38);
+    --text: rgb(250, 250, 255);
+    --primary: rgb(42, 76, 212);
+    --secondary: rgb(220, 30, 30);
+    --accent: rgb(123, 67, 249);
+    --titre: "Press Start 2P", system-ui;
+    --font2: "Roboto Slab", serif;
+}
+
+body {
+    font-family: "Press Start 2P", system-ui;
+    color:var(--text);
+    background:var(--primary);
+
+}
+
+body {
+    background-image: url(./images/borneretro.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+
+h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 20px;
+    font-family: var(--titre);
+}
+
+.img-reparation{
+    width: 650px;
+    height: 250px;
+    object-fit:cover;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.socials {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials li a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: #f80a0a;
+    text-decoration: underline;
+}
+
+.footer-bottom a:hover {
+    color: #f39c12;
+}
+
+.texte-footer {
+    font-family: "Roboto Light";
+}
+
+#legal_mentions {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.boutton {
+    text-decoration: underline;
+}
+
+.border {
+    display: inline-block;
+    border: #fff solid 1px;
+    width: 28%;
+    font-family: "Roboto Light";
+}
+
+.footer-texte {
+    font-family: "Roboto Light";
+}
+
+/*---responsive---*/
+
+@media screen and (min-width:1024px )
+{#1
+{
+    width: 90%;
+    height: 100%;
+}
+}
+@media screen and (min-width:1024px )
+{ .img-reparation
+{
+
+        max-width: 100%;
+        height: auto;
+
+
+}
+}
+
+@media screen and (min-width:768px  )
+{#1
+{
+    width: 90%;
+    height: 100%;
+}
+}
+
+@media screen and (min-width:768px  )
+{ .img-reparation
+{
+
+    max-width: 100%;
+    height: auto;
+
+
+}
+}
+
+@media screen and (min-width:0px  )
+{#1
+{
+    width: 90%;
+    height: 100%;
+}
+}
+
+@media screen and (min-width:0px  )
+{ .img-reparation
+{
+    max-width: 100%;
+    height: auto;
+}
+
+}
