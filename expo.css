@@ -163,12 +163,15 @@ Les consoles présentées
     display: flex;
     flex-direction: column;
     max-width: 15%;
+
 }
 .div-grid-console h3{
     font-family: var(--titre);
 }
 .img-console-expo{
-
+    object-fit: cover;
+    width: 80%;
+    height: 80%;
 }
 /**************************************************************************
  responsive
@@ -193,6 +196,57 @@ Les consoles présentées
     h1{
         font-size: 1rem;
     }
+    /***************************************************************************
+Les consoles présentées
+*/
+    .consoles-presentes h2{
+        font-family: var(--titre);
+        margin-left: 2rem;
+        text-align: center;
+    }
+    .grid-console{
+        display: grid;
+        grid-template-columns: 40% 0% 40%;
+        grid-template-rows: 30% 30% 30%;
+        margin-top: 2rem;
+    }
+    .div-grid-console{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+
+    }
+    #grid-console1{
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+    #grid-console2{
+        grid-column-start: 3;
+        grid-row-start: 1;
+    }
+    #grid-console3{
+        grid-column-start: 1;
+        grid-row-start: 3;
+    }
+    #grid-console4{
+        grid-column-start: 3;
+        grid-row-start: 3;
+    }
+
+    .div-grid-console h3{
+        font-family: var(--titre);
+        text-align: center;
+    }
+    .div-grid-console p{
+        text-align: center;
+    }
+    .img-console-expo{
+        object-fit: cover;
+        width: 80%;
+        height: 80%;
+        margin: auto;
+    }
+
 }
 @media screen and (max-width:767px){
     h1{
@@ -213,5 +267,32 @@ Les consoles présentées
     .banner-expo-img{
         width: 70%;
         display:none;
+    }
+    /***************************************************************************
+Les consoles présentées
+*/
+    .consoles-presentes h2{
+        font-family: var(--titre);
+        margin-left: 2rem;
+    }
+    .grid-console{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    .div-grid-console{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+
+    }
+    .div-grid-console h3{
+        font-family: var(--titre);
+    }
+    .img-console-expo{
+        object-fit: cover;
+        width: 80%;
+        height: 80%;
     }
 }
