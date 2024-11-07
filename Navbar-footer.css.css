@@ -331,7 +331,7 @@ a .logo {
 	text-align: center;	
 	border-style: solid; 
 	border-width: 50px;
-	border-image-source: url(se-connecter-bordure.png);
+	border-image-source: url(images/se-connecter-bordure.png);
 	border-image-slice: 300 150 300 150; /* haut | droit | bas | gauche */
 	border-image-width: 50px;
 	color: red ;
@@ -517,7 +517,7 @@ footer.example-1 {
 	text-decoration: underline;
 	border-style: solid;
 	border-width: 8px;
-	border-image-source: url(incroyable-bordure.png);
+	border-image-source: url(images/incroyable-bordure.png);
 	border-image-slice: 120 120 120 120; /* haut | droit | bas | gauche */
 	border-image-width: 5px;
 }
