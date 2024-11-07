@@ -17,8 +17,104 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-
+    border-style: solid;
+    box-shadow:
+        0 0 8px #fff,
+        inset 0 0 8px #fff,
+        0 0 16px #c6e2ff,
+        inset 0 0 16px #c6e2ff,
+        0 0 32px #c6e2ff,
+        inset 0 0 32px #c6e2ff;
 }
+
+span {
+    color: #f80a0a;
+    text-shadow:
+        0 0 6px rgba(202, 228, 225, 0.92),
+        0 0 30px rgba(202, 228, 225, 0.34),
+        0 0 12px rgba(220, 30, 30, 0.52),
+        0 0 21px rgba(220, 30, 30, 0.92),
+        0 0 34px rgba(220, 30, 30, 0.78),
+        0 0 54px rgba(220, 30, 30, 0.92);
+    animation: flashing 1.4s infinite alternate;
+}
+
+.info_imp {
+    background-color: var(--accent);
+    border-style: solid;
+    box-shadow:
+        0 0 8px #fff,
+        inset 0 0 8px #fff,
+        0 0 16px #c6e2ff,
+        inset 0 0 16px #c6e2ff,
+        0 0 32px #c6e2ff,
+        inset 0 0 32px #c6e2ff;
+}
+
+.container {
+    max-width: 660px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(1, 11, 38, 0.1);
+}
+
+h1 {
+    color: var(--primary);
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgba(red, green, blue, 0.7);
+}
+
+.event-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.event-info p {
+    font-size: 1.2em;
+    color: var();
+    margin: 10px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.1em;
+    color: var(--secondary);
+    margin: 5px 0;
+    font-weight: bolder;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cta a {
+    text-decoration: none;
+    background-color: #007BFF;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border-color: #f80a0a;
+}
+
+.cta a:hover {
+    background-color: rgba(250, 250, 255, 0.7);
+    color: #f80a0a;
+}
+
+.hashtag {
+    color: #007BFF;
+    font-size: 1.1em;
+}
+
 
 
 footer {
@@ -97,4 +193,113 @@ footer {
 
 .footer-texte {
     font-family: "Roboto Light";
+}
+
+/* Responsive design PC*/
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .event-info p,
+    .cta a {
+        font-size: 0.9em;
+    }
+
+    .cta a {
+        padding: 12px 25px;
+    }
+}
+
+/* Responsive design tablettes */
+
+@media (max-width: 1023px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .event-info p,
+    .cta a {
+        font-size: 1em;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    *{
+        text-align: left;
+    }
+}
+
+/* Responsive design tablettes */
+
+@media (max-width:1023) ,(min-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .event-info p,
+    .cta a {
+        font-size: 0.9em;
+    }
+
+    .cta a {
+        padding: 12px 25px;
+    }
+
+    *{
+        text-align: left;
+    }
+}
+
+
+
+/* Responsive design mobiles */
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .event-info p,
+    .cta a {
+        font-size: 0.9em;
+    }
+
+    .cta a {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    
+}
+
+@keyframes flashing {
+
+    0%,
+    18%,
+    21%,
+    32%,
+    35%,
+    39%,
+    42%,
+    100% {
+        text-shadow:
+            0 0 16px #ffd6d6,
+            0 0 16px #ffd6d6,
+            0 0 32px #f80a0a,
+            0 0 64px #f80a0a,
+            0 0 90px #f80a0a,
+            0 0 124px #f80a0a;
+
+    }
+
+    20%,
+    34%,
+    41% {
+        text-shadow: none;
+        box-shadow: none;
+    }
 }
