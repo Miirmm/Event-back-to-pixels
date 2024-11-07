@@ -1,0 +1,498 @@
+/* Vos styles ici */
+body {
+  font-family: "Press Start 2P", sans-serif;
+  text-decoration: none;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+h2 {
+  font-family: "Press Start 2P", sans-serif;
+}
+
+h1{
+  text-align: center;
+}
+
+.grandmenu > ul {
+  text-decoration: none;
+}
+
+.grandmenu {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 20px;
+  gap: 25px;
+  position: fixed;
+  width: 100%;
+  background-color: #333;
+}
+
+li {
+  list-style: none;
+}
+.class-sous-nav:hover .sous-nav {
+  display: block;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.sous-nav {
+  display: none;
+}
+
+header {
+  background-color: #333;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+/*test*/
+
+nav ul {
+  font-size: 15px;
+  display: inline-block;
+  padding: right 1px;
+  list-style: none;
+  /*margin-right: 15px;*/
+}
+
+#backtopixel {
+  display: inline-block;
+  border: 10px;
+  width: 200px;
+  height: 75px;
+}
+
+#formulaire_message {
+  margin: 16px;
+  padding: 9px;
+}
+
+#formulaire_envoyer {
+  margin-left: 16px;
+  padding: 3px;
+}
+
+.formulaire {
+  margin: 0px;
+  padding: 9px;
+}
+
+img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+li a {
+  margin: 5px;
+}
+
+main a {
+  display: inline-block;
+  width: 47%;
+}
+
+section h2 {
+  text-align: left;
+  color: #ffffff;
+  font-size: 30px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+h2 {
+  margin: 100px;
+}
+
+section h2 {
+  margin: 50px;
+}
+
+.logo_yt {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+#slogan {
+  display: flex;
+  text-align: center;
+}
+#Consoles {
+  font-size: 20px;
+}
+
+#boutique {
+  width: 100%;
+  height: 500px;
+  padding-top: 100px;
+}
+
+#actualités {
+  margin: 50px;
+}
+#facebook {
+  padding-left: 30%;
+}
+.contact {
+  padding-left: 41%;
+}
+iframe {
+  display: inline-block;
+  padding-left: 25%;
+  width: 50%;
+  margin: 10px;
+}
+
+section p {
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#horaires {
+  padding-left: 40%;
+}
+/* 
+
+
+FOOTER 
+
+
+
+*/
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-content h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.footer-content p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.socials {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+
+.socials li a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: #f80a0a;
+  text-decoration: underline;
+}
+
+.footer-bottom a:hover {
+  color: #f39c12;
+}
+
+
+
+/* Début format Ordinateur/ PC */
+
+@media screen and (min-width: 1025px){
+
+  .grandmenu{
+    text-align: center;
+    padding: 2rem;
+  }
+
+  section h2{
+    color:#f80a0a
+  }
+
+  div p{
+    text-align: center;
+  }
+
+/* Histoire de nintendo*/
+  .image_histoire{
+    width: 40%;
+    height: 40%;
+    margin: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+
+ /* Les Consoles*/
+  .images_consoles{
+    width:90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 40px;
+  }
+
+  .description_consoles{
+    text-align: center;
+    width: 90%;
+    font-size: 15px;
+    margin: auto;
+  }
+
+  .Personnages-iconiques {
+    margin-top: 200px;
+  }
+
+  main a {
+    display: inline-block;
+    width: 20%;
+  }
+
+  /*Les personnages iconiques*/
+
+  .section_personnages_iconiques{
+    display: flex;
+    justify-content: space-between;
+   }
+
+
+  .section_consoles_marquantes{
+   display: flex;
+   justify-content: space-between;
+  }
+
+
+   .description_personnages_iconiques{
+    text-align: center;
+    width: 90%;
+    font-size: 15px;
+    margin: auto;
+  }
+
+  .images_personnages_iconiques{
+    width:50%;
+    height: 50%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin: auto;
+    padding: 50px;
+    
+  }
+
+  /* Vidéo documentaire */
+  .section_vidéo_documentaire{
+    margin-top: 400px;
+    margin-bottom: 300px;
+  }
+
+  }
+
+/* Fin format Ordinateur/ PC */  
+
+
+
+/* Début format Tablette */  
+
+  @media screen and (max-width: 1024px){
+    section h2{
+    color: #333;
+   } 
+   
+   /*Les consoles*/
+   .section_consoles_marquantes{ 
+    margin: auto;   
+   }
+
+   .Nom_consoles{
+    text-align: center;
+    margin-top: 100px;
+   }
+
+   .images_consoles{
+    width:90%;
+    height: 90%;
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .description_consoles{
+    text-align: center;
+    width: 90%;
+    font-size: 15px;
+    margin: auto;
+    margin-top: 50px;
+  }
+
+  .partie_consoles_1{
+    display: flex;
+    margin-bottom: 400px;
+  }
+
+  .partie_consoles_2{
+    display: flex;
+    margin-bottom: 400px;
+  }
+
+  /* Les Personnages iconiques*/
+
+  .Personnages-iconiques {
+    margin-top: 300px;
+  }
+
+  .section_personnages_iconiques{
+    display: flex;
+    justify-content: space-between;
+   }
+
+
+   .description_personnages_iconiques{
+    text-align: center;
+    width: 90%;
+    font-size: 15px;
+    margin: auto;
+  }
+
+  .images_personnages_iconiques{
+    width:50%;
+    height: 50%;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    
+  }
+
+
+  /* Vidéo documentaire */
+  .section_vidéo_documentaire{
+    margin-top: 400px;
+    margin-bottom: 300px;
+  }
+
+
+
+  }     
+
+/* Fin format Tablette */   
+
+
+
+/*Début format Smartphone/ Téléphone */
+
+  @media screen and (max-width: 750px){
+    section h2{
+      color:green;
+     } 
+
+     /*Consoles*/
+
+     .partie_SNES{
+      margin: 50px;
+     }
+
+     .partie_NES{
+      margin: 50px;
+     }
+
+     .partie_N64{
+      margin: 50px;
+     }
+
+     .partie_Gameboy{
+      margin: 50px;
+     }
+     
+     .partie_consoles_1{
+      display: flex;
+      margin-bottom: 100px;
+      flex-direction: column;
+    }
+  
+    .partie_consoles_2{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+
+
+    .images_consoles{
+      width:90%;
+      height: 90%;
+      display: flex;
+      align-self: center;
+      flex-direction: row;
+      justify-content: center;
+      margin: 10px;
+      
+    }
+
+    /*Personnages iconiques*/
+
+    .section_personnages_iconiques{
+      display: inline-block;
+      text-align: center;
+      
+     }
+
+     .description_personnages_iconiques{
+      text-align: center;
+      width: 90%;
+      font-size: 15px;
+      margin: 50px;
+    }
+
+    .description_personnages_iconiques{
+      text-align: center;
+      width: 90%;
+      font-size: 15px;
+      margin: auto;
+    }
+
+    /* Vidéo documentaire */
+  .section_vidéo_documentaire{
+    margin-top: 100px;
+    margin-bottom: 200px;
+  }
+  }
+
+  /*Fin format Smartphone/ Téléphone */
+
+
+  /*PC : min 1024px 
+  Tablette : 768px à 1023px 
+  mobile : max 767px*/
