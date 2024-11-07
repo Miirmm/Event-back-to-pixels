@@ -11,6 +11,7 @@
 body {
     font-family: "Press Start 2P", system-ui;
     color: var(--text);
+    text-align: center; /* Centre tout par défaut */
     background: var(--primary);
     background-image: url(./images/borneretro.png);
     background-size: cover;
@@ -195,70 +196,9 @@ footer {
     font-family: "Roboto Light";
 }
 
-/* Responsive design PC*/
-
-@media (min-width: 1024px) {
-    h1 {
-        font-size: 1.8em;
-    }
-
-    .event-info p,
-    .cta a {
-        font-size: 0.9em;
-    }
-
-    .cta a {
-        padding: 12px 25px;
-    }
-}
-
-/* Responsive design tablettes */
-
-@media (max-width: 1023px) {
-    h1 {
-        font-size: 2em;
-    }
-
-    .event-info p,
-    .cta a {
-        font-size: 1em;
-    }
-
-    .container {
-        padding: 15px;
-    }
-
-    *{
-        text-align: left;
-    }
-}
-
-/* Responsive design tablettes */
-
-@media (max-width:1023) ,(min-width: 768px) {
-    h1 {
-        font-size: 1.8em;
-    }
-
-    .event-info p,
-    .cta a {
-        font-size: 0.9em;
-    }
-
-    .cta a {
-        padding: 12px 25px;
-    }
-
-    *{
-        text-align: left;
-    }
-}
-
-
-
 /* Responsive design mobiles */
 
-@media (max-width: 767px) {
+@media (max-width: 480px){
     h1 {
         font-size: 1.8em;
     }
@@ -272,8 +212,91 @@ footer {
         padding: 12px 25px;
         font-size: 1em;
     }
+}
 
-    
+
+/* Responsive design tablettes en mode portrait */
+
+@media (min-width: 481px),(max-width:767px){
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .event-info p,
+    .cta a {
+        font-size: 0.9em;
+    }
+
+    .cta a {
+        padding: 12px 25px;
+    }
+
+    body{
+        text-align: center;
+    }
+}
+
+/* Responsive design tablettes en mode paysage */
+
+@media (min-width: 768px),(max-width:900px){
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .event-info p,
+    .cta a {
+        font-size: 0.9em;
+    }
+
+    .cta a {
+        padding: 12px 25px;
+    }
+
+    body{
+        text-align: left;
+    }
+}
+
+/* Responsive design PC*/
+
+@media (min-width: 1024px),(max-width:1200px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .event-info p,
+    .cta a {
+        font-size: 0.9em;
+    }
+
+    .cta a {
+        padding: 12px 25px;
+    }
+
+    body{
+        text-align: left;
+    }
+}
+
+/* Responsive design PC grand écrans */
+
+@media (min-width: 1200px){
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .event-info p,
+    .cta a {
+        font-size: 1.2em;
+    }
+
+    .cta a {
+        padding: 15px 30px;
+    }
+
+    body{
+        text-align: left;
+    }
 }
 
 @keyframes flashing {
