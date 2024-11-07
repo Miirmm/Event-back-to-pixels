@@ -20,6 +20,7 @@
 
 body{
     background: linear-gradient(rgb(0, 0, 0), var(--primary));
+    background-attachment: fixed;
 }
 h1{
     text-align: left;
@@ -227,21 +228,31 @@ Les consoles présentées
 .div-grid-jeux p{
     text-align: center;
 }
-/**************************************************************************/
-
+/**************************************************************************
+créneaux réservation*/
+.crenaux-reservation h2{
+    font-family: var(--titre);
+    margin-left: 2rem;
+}
 table.darkTable {
     font-family: "Arial Black", Gadget, sans-serif;
-    border: 2px solid #000000;
+    border: 2px solid white;
     background-color: #4A4A4A;
     width: 80%;
     height: 200px;
     text-align: center;
     border-collapse: collapse;
     margin:auto;
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem var(--accent),
+    0 0 0.8rem var(--accent),
+    0 0 2.8rem var(--accent),
+    inset 0 0 1.3rem var(--accent);
 
 }
 table.darkTable td, table.darkTable th {
-    border: 1px solid #4A4A4A;
+    border: 1px solid black;
     padding: 3px 4px;
 }
 table.darkTable tbody td {
@@ -253,14 +264,14 @@ table.darkTable tr:nth-child(even) {
 }
 table.darkTable thead {
     background: #000000;
-    border-bottom: 3px solid #000000;
+    border-bottom: 3px solid var(--text);
 }
 table.darkTable thead th {
     font-size: 15px;
     font-weight: bold;
     color: #E6E6E6;
     text-align: center;
-    border-left: 2px solid #4A4A4A;
+    border-left: 2px solid var(--background);
 }
 table.darkTable thead th:first-child {
     border-left: none;
@@ -279,8 +290,8 @@ table.darkTable tfoot td {
     color: var(--text);
     font-size: 18px;
     border-radius: 0px;
-    width: 200px;
-    height: 40px;
+    width: 20%;
+    height: 4%;
     border: 0px solid var(--background);
     position: relative;
     transition: 0.3s;
@@ -288,6 +299,7 @@ table.darkTable tfoot td {
     background-image: var(--background);
     margin: auto;
     margin-top: 3rem;
+    flex-wrap: wrap;
 }
 
 .original-button::before, .original-button::after {
@@ -313,6 +325,102 @@ table.darkTable tfoot td {
 .original-button:hover::before, .original-button:hover::after {
     top: 0;
     left: 0;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.div-popup-réservation {
+    margin: 70px auto;
+    padding: 20px;
+    background: var(--background);
+    border-radius: 20px;
+    width: 50%;
+    position: relative;
+    transition: all 2s ease-in-out;
+}
+
+.div-popup-réservation h2 {
+    margin-top: 1rem;
+    color: var(--text);
+    font-family:var(--titre);
+    text-align: center
+;
+}
+.div-popup-réservation .close {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--secondary);
+}
+.div-popup-réservation .close:hover {
+    color: var(--secondary);
+}
+.div-popup-réservation .content {
+    overflow: auto;
+    background-color: var(--background);
+}
+.label-jour-sem{
+    max-width: fit-content;
+}
+.label-jour-sem:after{
+    content: ":";
+    margin-left: 6px;
+}
+.form-jour{
+    text-align: center;
+}
+.div-form-barre-haut{
+    border-top: solid 1px var(--text);
+    margin-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    border-radius: 10px;
+}
+#nom-form-crenaux{
+    color: black;
+    margin-top: 1rem;
+    max-width: fit-content;
+}
+.boutton-send-crenaux{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 18px;
+    border-radius: 0px;
+    width: 20%;
+    height: 5%;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: 0.3s;
+    box-shadow: 5px 5px 0px 0px var(--primary);
+    background-color: var(--secondary);
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.boutton-send-crenaux:hover {
+    box-shadow: 0 0 var(--secondary);
+    color: #fff;
+    background-color: var(--primary);
 }
 /**************************************************************************
  responsive
@@ -449,5 +557,22 @@ Les consoles présentées
         flex-direction: column;
         max-width: 100%;
         margin-bottom: 5rem;
+    }
+    /************************************************/
+    /*form crenaux*/
+    .div-popup-réservation h2 {
+        margin-top: 1rem;
+        color: var(--text);
+        font-family:var(--titre);
+        text-align: center;
+        font-size: 1rem;
+    }
+    .div-popup-réservation{
+        font-size: 0.5rem;
+    }
+}
+@media screen and (max-width:200px){
+    .darkTable{
+        display: none;
     }
 }

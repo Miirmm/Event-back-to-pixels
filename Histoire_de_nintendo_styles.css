@@ -59,28 +59,6 @@ nav ul {
   /*margin-right: 15px;*/
 }
 
-#backtopixel {
-  display: inline-block;
-  border: 10px;
-  width: 200px;
-  height: 75px;
-}
-
-#formulaire_message {
-  margin: 16px;
-  padding: 9px;
-}
-
-#formulaire_envoyer {
-  margin-left: 16px;
-  padding: 3px;
-}
-
-.formulaire {
-  margin: 0px;
-  padding: 9px;
-}
-
 img {
   width: 100%;
   height: 250px;
@@ -117,34 +95,6 @@ section h2 {
   margin: 50px;
 }
 
-.logo_yt {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-}
-#slogan {
-  display: flex;
-  text-align: center;
-}
-#Consoles {
-  font-size: 20px;
-}
-
-#boutique {
-  width: 100%;
-  height: 500px;
-  padding-top: 100px;
-}
-
-#actualités {
-  margin: 50px;
-}
-#facebook {
-  padding-left: 30%;
-}
-.contact {
-  padding-left: 41%;
-}
 iframe {
   display: inline-block;
   padding-left: 25%;
@@ -158,9 +108,6 @@ section p {
   text-decoration: none;
 }
 
-#horaires {
-  padding-left: 40%;
-}
 /* 
 
 
@@ -193,11 +140,11 @@ footer {
   padding: 0;
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  margin: 2rem 0;
 }
 
 .socials li {
-  margin: 0 10px;
+  margin: 0 1rem;
 }
 
 .socials li a {
@@ -224,7 +171,7 @@ footer {
   color: #f39c12;
 }
 
-
+/*==========================================================================================================================================================================*/
 
 /* Début format Ordinateur/ PC */
 
@@ -236,11 +183,12 @@ footer {
   }
 
   section h2{
-    color:#f80a0a
+    color:#f80a0a;
+    text-align: left;
   }
 
   div p{
-    text-align: center;
+    text-align: left;
   }
 
 /* Histoire de nintendo*/
@@ -250,7 +198,7 @@ footer {
     margin: 3rem;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-self: flex-end;
   }
 
 
@@ -258,22 +206,35 @@ footer {
   .images_consoles{
     width:90%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    padding: 40px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 1rem;
+    padding: 2rem;
   }
 
   .description_consoles{
-    text-align: center;
+    text-align: left;
     width: 90%;
     font-size: 15px;
-    margin: auto;
+    margin: 1rem;
   }
 
-  .Personnages-iconiques {
-    margin-top: 200px;
+  .section_consoles_marquantes{
+    display: flex;
+    justify-content: space-between;
+   }
+
+   .partie_consoles_1{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3rem;
   }
+
+  .partie_consoles_2{
+    display: flex;
+    margin-bottom: 3rem;
+  }
+
 
   main a {
     display: inline-block;
@@ -287,15 +248,13 @@ footer {
     justify-content: space-between;
    }
 
-
-  .section_consoles_marquantes{
-   display: flex;
-   justify-content: space-between;
+   .Personnages-iconiques {
+    margin-top: 20rem;
   }
 
 
    .description_personnages_iconiques{
-    text-align: center;
+    text-align: left;
     width: 90%;
     font-size: 15px;
     margin: auto;
@@ -305,31 +264,36 @@ footer {
     width:50%;
     height: 50%;
     display: flex;
-    align-self: center;
-    justify-content: center;
+    align-self: flex-start;
+    justify-content: flex-start;
     margin: auto;
-    padding: 50px;
+    padding: 5rem;
     
   }
 
   /* Vidéo documentaire */
   .section_vidéo_documentaire{
-    margin-top: 400px;
-    margin-bottom: 300px;
+    margin-top: 40rem;
+    margin-bottom: 30rem;
   }
 
   }
 
 /* Fin format Ordinateur/ PC */  
 
-
+/*==========================================================================================================================================================================*/
 
 /* Début format Tablette */  
 
   @media screen and (max-width: 1024px){
     section h2{
     color: #333;
+    text-align: center;
    } 
+
+  div p{
+    text-align: center;
+  }
    
    /*Les consoles*/
    .section_consoles_marquantes{ 
@@ -410,14 +374,19 @@ footer {
 
 /* Fin format Tablette */   
 
-
+/*==========================================================================================================================================================================*/
 
 /*Début format Smartphone/ Téléphone */
 
-  @media screen and (max-width: 750px){
+  @media screen and (max-width: 425px){
     section h2{
       color:green;
-     } 
+      text-align: center;
+     }
+
+     section h3{
+      font-size: 10px;
+     }
 
      /*Consoles*/
 
@@ -473,14 +442,8 @@ footer {
       text-align: center;
       width: 90%;
       font-size: 15px;
-      margin: 50px;
-    }
-
-    .description_personnages_iconiques{
-      text-align: center;
-      width: 90%;
-      font-size: 15px;
-      margin: auto;
+      margin: 5rem;
+      margin-bottom: 8rem;
     }
 
     /* Vidéo documentaire */
@@ -492,6 +455,7 @@ footer {
 
   /*Fin format Smartphone/ Téléphone */
 
+  /*==========================================================================================================================================================================*/
 
   /*PC : min 1024px 
   Tablette : 768px à 1023px 
