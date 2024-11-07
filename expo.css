@@ -326,6 +326,102 @@ table.darkTable tfoot td {
     top: 0;
     left: 0;
 }
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.div-popup-réservation {
+    margin: 70px auto;
+    padding: 20px;
+    background: var(--background);
+    border-radius: 20px;
+    width: 50%;
+    position: relative;
+    transition: all 2s ease-in-out;
+}
+
+.div-popup-réservation h2 {
+    margin-top: 1rem;
+    color: var(--text);
+    font-family:var(--titre);
+    text-align: center
+;
+}
+.div-popup-réservation .close {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--secondary);
+}
+.div-popup-réservation .close:hover {
+    color: var(--secondary);
+}
+.div-popup-réservation .content {
+    overflow: auto;
+    background-color: var(--background);
+}
+.label-jour-sem{
+    max-width: fit-content;
+}
+.label-jour-sem:after{
+    content: ":";
+    margin-left: 6px;
+}
+.form-jour{
+    text-align: center;
+}
+.div-form-barre-haut{
+    border-top: solid 1px var(--text);
+    margin-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    border-radius: 10px;
+}
+#nom-form-crenaux{
+    color: black;
+    margin-top: 1rem;
+    max-width: fit-content;
+}
+.boutton-send-crenaux{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 18px;
+    border-radius: 0px;
+    width: 20%;
+    height: 5%;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: 0.3s;
+    box-shadow: 5px 5px 0px 0px var(--primary);
+    background-color: var(--secondary);
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.boutton-send-crenaux:hover {
+    box-shadow: 0 0 var(--secondary);
+    color: #fff;
+    background-color: var(--primary);
+}
 /**************************************************************************
  responsive
  */
@@ -462,5 +558,21 @@ Les consoles présentées
         max-width: 100%;
         margin-bottom: 5rem;
     }
-
+    /************************************************/
+    /*form crenaux*/
+    .div-popup-réservation h2 {
+        margin-top: 1rem;
+        color: var(--text);
+        font-family:var(--titre);
+        text-align: center;
+        font-size: 1rem;
+    }
+    .div-popup-réservation{
+        font-size: 0.5rem;
+    }
+}
+@media screen and (max-width:200px){
+    .darkTable{
+        display: none;
+    }
 }
