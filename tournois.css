@@ -1,0 +1,475 @@
+:root {
+    --text: rgb(1, 11, 38);
+    --background: rgb(250, 250, 255);
+    --primary: rgb(42, 76, 212);
+    --secondary: rgb(220, 30, 30);
+    --accent: rgb(123, 67, 249);
+    --titre: "Press Start 2P", system-ui;
+    --font2: "Roboto Slab", serif; 
+    } 
+
+
+    h1,h2,h3,h4{
+        font-family: var(--titre);
+    }
+
+    h2{
+        text-decoration: underline;
+        margin-top: 100px;
+        color: var(--secondary);
+    }
+
+    body{
+        font-family: var(--font2);
+    }
+
+
+/**************************************************************************************************************************/
+
+
+.jolie{
+    width: 100%;
+    height: 700px;
+    background-image: url(https://www.dokodemo.fr/wp-content/uploads/2019/03/salle-arcade-mikado.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.jolie button{
+   margin-bottom: 100px;
+   height: 50px;
+   width: 200px;
+}
+
+
+
+
+/**************************************************************************************************************************/
+
+.countdown{
+    width: 100%;
+    padding-bottom: -100px;
+    border-bottom: solid black 3px;
+}
+
+/**************************************************************************************************************************/
+
+.jeux-tournoi{
+    display: flex;
+    justify-content: center;
+}
+
+.bloc-jeu{
+    height: 400px;
+    width: 300px;
+    margin: 20px;
+    color: white;
+    font-size: 500%;
+    position: relative;
+    p{
+      padding-top: 10%;
+    }    
+    button{
+        margin-bottom: 10%;
+    }
+}
+
+.bloc-jeu img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    z-index: 1;
+    position: absolute;
+}
+
+.inscrip{
+    z-index: 2;
+    position: relative;
+    margin: 0 10%;
+    text-align: center;
+    font-size: 90%;
+}
+
+/**************************************************************************************************************************/
+
+#reglement{
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--background);
+    padding: 0 50px;
+    line-height: 2;
+}
+
+#reglement img{
+    width: 200px;
+    height: 200px;
+}
+
+/**************************************************************************************************************************/
+
+
+.grille-score{
+    display: flex;
+    justify-content: center;
+}
+
+.bloc-score{
+    height: 1250px;
+    width: 300px;
+    margin: 20px;
+    color: white;
+    font-size: 500%;
+    position: relative;
+    p{
+      padding-top: 10%;
+    }    
+    button{
+        margin-bottom: 10%;
+    }
+}
+
+.score-jeu{
+    width: 100%;
+    height: 1250px;
+    object-fit: cover;
+    z-index: 1;
+    position: absolute;
+    opacity: 0.7;
+}
+
+.position{
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding-top: 10%;
+    font-size: 30px;
+}
+
+.premier,.deuxieme,.troisieme{
+    width: 90%;
+    height: 300px;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.premier > img{
+    width: 30%;
+    height: 15%;
+}
+
+.premier > p{
+    padding: 0;
+    margin-top: 0;
+}
+
+.pseudal{
+    position: relative;
+}
+
+.pseudal img{
+    z-index: 1;
+    width: 150%;
+    height: 150px;
+    position:absolute;
+    margin-left: -25%;
+    margin-top: 0;
+}
+
+.pseudal p{
+    z-index: 2;
+    position: relative;
+}
+
+.camenerve{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 80%;
+    height: 70px;
+}
+
+.deuxieme > img{
+    width: 30%;
+    height: 15%;
+}
+
+.deuxieme> p{
+    padding: 0;
+    margin-top: 0;
+}
+
+.troisieme >img{
+    width: 30%;
+    height: 15%;
+}
+
+.troisieme> p{
+    padding: 0;
+    margin-top: 0;
+}
+
+.loser{
+    width: 90%;
+    height: 290px;
+    margin-top: 2%;
+}
+
+.quatre,.cinq,.six{
+    z-index: 2;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-size: 20px;
+        padding: 0 5%;
+    }
+    border: solid white 2px;
+    text-align: center;
+}
+
+.quatre img{
+    width: 20%;
+    height: 40px;
+}
+
+.cinq img{
+    width: 20%;
+    height: 40px;
+}
+
+.six img{
+    width: 20%;
+    height: 40px;
+}
+
+/**************************************************************************************************************************/
+
+.inscription{
+    border-radius: 4%;
+    width: 70%;
+    height: 500px;
+    margin: 100px auto;
+    box-shadow: 10px 5px 5px black;
+    text-align: center;
+}
+
+.inscription form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-tournois{
+    width: 100%;
+    height: 50px;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-tournois label{
+    font-size: 20px;
+}
+
+.zone-texte{
+    width: 90%;
+    height: 50px;
+    font-size: 20px;
+}
+
+
+#form-tour-jeux{
+    width: 90%;
+    height: 50px;
+}
+
+#form-tour-jeux select{
+    width: 50%;
+    height: 100%;
+    font-size: 20px;
+}
+
+.inscription button{
+    margin-top: 2%;
+    height: 30px;
+    background: none;
+}
+
+.inscription button:hover{
+    background-color: black;
+    color: white;
+}
+
+
+/**************************************************************************************************************************/
+
+
+
+@media screen and (max-width: 1023px) {
+    h2{
+        text-decoration: underline;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .jolie{
+        width: 100%;
+    }
+
+    .jeux-tournoi{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .bloc-jeu{
+        height: 400px;
+        width: 40%;
+    }
+
+    .bloc-jeu img{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        z-index: 1;
+        position: absolute;
+    }
+
+    .inscrip{
+        z-index: 2;
+        position: relative;
+        margin: 0 10%;
+        text-align: center;
+        font-size: 90%;
+    }
+
+    .grille-score{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .bloc-score{
+        height: 1000px;
+        width: 40%;
+    }
+
+    .score-jeu{
+        width: 100%;
+        height: 1000px;
+        object-fit: cover;
+        z-index: 1;
+        position: absolute;
+    }
+
+    .premier,.deuxieme,.troisieme{
+        width: 90%;
+        height: 300px;
+        margin-top: 2%;
+    }
+
+    .pseudal img{
+        z-index: 1;
+        width: 150%;
+        height: 150px;
+        position:absolute;
+        margin-left: -25%;
+        margin-top: 0;
+    }
+    
+    .loser{
+        display: none;
+    }
+
+
+    .inscription{
+        border-radius: 4%;
+        width: 90%;
+        height: 500px;
+        margin: 100px auto;
+        box-shadow: 10px 5px 5px black;
+    }
+
+    .inscription form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+    }
+
+}
+
+
+
+
+
+@media screen and (max-width: 767px) {
+    h2{
+        text-decoration: underline;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .jolie{
+        width: 100%;
+    }
+
+    .bloc-jeu{
+        height: 400px;
+        width: 100%;
+        margin: 2% 0;
+    }
+
+    .inscrip{
+        z-index: 2;
+        position: relative;
+        margin: 0 10%;
+        text-align: center;
+        font-size: 90%;
+    }
+
+    #reglement img{
+        display: none;
+    }
+
+    .bloc-score{
+        height: 1000px;
+        width: 100%;
+        margin: 2% 0;
+    }
+
+    .pseudal img{
+        z-index: 1;
+        width: 150%;
+        height: 150px;
+        position:absolute;
+        margin-left: -25%;
+        margin-top: 0;
+    }
+
+    .loser{
+        display: none;
+    }
+
+    #form-tour-jeux select{
+        width: 50%;
+        height: 90%;
+        font-size: 90%;
+    }
+}
