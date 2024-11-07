@@ -23,7 +23,7 @@ body {
 }
 
 nav {
-	scale:2px;
+	scale: 2px;
 }
 
 .logo {
@@ -52,7 +52,7 @@ img.logo1 {
 }
 
 
-li {
+.links li {
 	list-style: none;
 	/* border: 2px solid blue;
 	border-radius: 8%;
@@ -61,7 +61,14 @@ li {
 	scale: 1;
 }
 
-ul .liste-deroulante {
+.links ul .liste-deroulante {
+	text-align: center;
+	transition: 0.3s;
+	scale: 1;
+	padding-left: 40px;
+}
+
+.burger-menu ul .liste-deroulante {
 	text-align: center;
 	transition: 0.3s;
 	scale: 1;
@@ -70,13 +77,24 @@ ul .liste-deroulante {
 
 
 
-a {
+div.navbar a {
 	text-decoration: none;
 	color: white;
 	font-size: 1.2rem;
 }
 
-a:hover {
+
+div.burger-menu a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.2rem;
+}
+
+div.navbar a:hover {
+	color: #63C7B2;
+}
+
+div.burger-menu a:hover {
 	color: #63C7B2;
 }
 
@@ -195,13 +213,10 @@ a .logo {
 	border: 3px ridge darkblue ;
 	border-radius: 15% 15% 25% 25%;
 	background-position: 40% 50%;
-	animation: scroll 10s linear alternate infinite;
+	transition: all 10 ease;
+    animation: scroll 10s linear alternate infinite;
 	
 
-}
-
-.submenu {
-	transition: all 10s ease;
 }
 
 @keyframes scroll{
@@ -334,7 +349,7 @@ a .logo {
 	text-align: center;	
 	border-style: solid; 
 	border-width: 50px;
-	border-image-source: url(images/se-connecter-bordure.png);
+	border-image-source: url(se-connecter-bordure.png);
 	border-image-slice: 300 150 300 150; /* haut | droit | bas | gauche */
 	border-image-width: 50px;
 	color: red ;
@@ -385,14 +400,11 @@ input[type="checkbox"] {
   }
 
   .deuxieme-fond {
-	  opacity: 1;
+	background-color: rgba(rgb(7, 7, 7), 0.8);
+	opacity: 1;
   }
-
-.deuxieme-fond {
-	background-color: rgba(rgb (7, 7, 7), 0.8);
-}
-
-input[type="checkbox"]:checked + label + .text {
+  
+  input[type="checkbox"]:checked + label + .text {
 	display: block;
   }
 
@@ -485,7 +497,7 @@ footer.example-1 {
   }
 
 .padding-pour-test {
-	margin-top: 1000px;
+	margin-top: 150px;
 }
 
 .taille-icon {
@@ -523,7 +535,7 @@ footer.example-1 {
 	text-decoration: underline;
 	border-style: solid;
 	border-width: 8px;
-	border-image-source: url(images/incroyable-bordure.png);
+	border-image-source: url(incroyable-bordure.png);
 	border-image-slice: 120 120 120 120; /* haut | droit | bas | gauche */
 	border-image-width: 5px;
 }
