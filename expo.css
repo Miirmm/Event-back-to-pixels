@@ -422,6 +422,240 @@ table.darkTable tfoot td {
     color: #fff;
     background-color: var(--primary);
 }
+/************************************************************************
+Réservation billet */
+ .section-reservation-billet h2{
+     font-family: var(--titre);
+     margin-left: 2rem;
+ }
+}
+.box {
+    margin: auto 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.overlay-billets {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay-billets:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-billets {
+    margin: 70px auto;
+    padding: 20px;
+    background: var(--background);
+    border-radius: 5px;
+    width: 50%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup-billets h2 {
+    margin-top: 3%;
+    color: var(--text);
+    font-family: var(--titre);
+}
+.popup-billets .close-billets {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text);
+}
+.popup-billets .close-billets:hover {
+    color: var(--secondary);
+}
+.popup-billets .content-billets{
+    text-align: center;
+}
+.glow-on-hover {
+    border: none;
+    outline: none;
+    color: var(--text);
+    background: var(--background);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 1rem 2rem 1rem 2rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    width: 15%;
+}
+.glow-on-hover:hover{
+    background: transparent;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: var(--background);
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+    z-index: 2;
+}
+.hover-color{
+    z-index: 999;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+
+
+.popup-billets:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.popup-billets:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+
+.wrap {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-buy {
+    display: inline-flex;
+    font-size: 1rem;
+    z-index: 999    ;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1.3px;
+    font-weight: 500;
+    color: black;
+    background: var(--secondary);
+    border: none;
+    border-radius: 100px;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+}
+
+.button-buy::before {
+    content: '';
+    z-index: 999;
+    border-radius: 1000px;
+    min-width:150%;
+    min-height: 150%;
+    border: 4px solid var(--secondary);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: all .3s ease-in-out 0s;
+}
+
+.button-buy:hover,
+.button-buy:focus {
+    color: #313133;
+    transform: translateY(-6px);
+    z-index: 999;
+}
+
+.button-buy:hover::before,
+.button-buy:focus::before {
+    opacity: 1;
+    z-index: 999;
+}
+
+.button-buy::after {
+    content: '';
+    z-index: 999;
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid var(--secondary);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+.button-buy:hover::after,
+.button-buy:focus::after {
+    animation: none;
+    display: none;
+    z-index: 999;
+}
 /**************************************************************************
  responsive
  */
@@ -574,5 +808,22 @@ Les consoles présentées
 @media screen and (max-width:200px){
     .darkTable{
         display: none;
+    }
+}
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
     }
 }
