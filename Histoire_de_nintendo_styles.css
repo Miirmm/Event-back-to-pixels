@@ -413,6 +413,24 @@ footer {
       font-size: 10px;
      }
 
+     .image_histoire{
+      width: 40%;
+      height: 40%;
+      margin: 3rem;
+      display: flex;
+      order: 2;
+      align-self: flex-end;
+    }
+  
+    .section_début_de_nintendo{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .section_début_de_nintendo h3{
+      font-size: 15px;
+    }
+
      /*Consoles*/
 
      .partie_SNES{
