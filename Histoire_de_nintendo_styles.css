@@ -131,6 +131,7 @@ footer {
 
 .footer-content p {
   margin: 10px 0;
+  text-align: center;
   font-size: 1.1rem;
   line-height: 1.5;
 }
@@ -175,7 +176,7 @@ footer {
 
 /* Début format Ordinateur/ PC */
 
-@media screen and (min-width: 1025px){
+@media screen and (min-width: 1024px){
 
   .grandmenu{
     text-align: center;
@@ -191,14 +192,20 @@ footer {
     text-align: left;
   }
 
+
 /* Histoire de nintendo*/
   .image_histoire{
-    width: 40%;
-    height: 40%;
+    width: 30%;
+    height: 30%;
     margin: 3rem;
     display: flex;
-    justify-content: flex-end;
+    order: 2;
     align-self: flex-end;
+  }
+
+  .section_début_de_nintendo{
+    display: flex;
+    flex-direction: column;
   }
 
 
@@ -285,14 +292,32 @@ footer {
 
 /* Début format Tablette */  
 
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
     section h2{
-    color: #333;
+    color: #6d6d6d;
     text-align: center;
    } 
 
   div p{
     text-align: center;
+  }
+
+  .image_histoire{
+    width: 40%;
+    height: 40%;
+    margin: 3rem;
+    display: flex;
+    order: 2;
+    align-self: flex-end;
+  }
+
+  .section_début_de_nintendo{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section_début_de_nintendo h3{
+    font-size: 15px;
   }
    
    /*Les consoles*/
@@ -378,9 +403,9 @@ footer {
 
 /*Début format Smartphone/ Téléphone */
 
-  @media screen and (max-width: 425px){
+  @media screen and (max-width: 767px){
     section h2{
-      color:green;
+      color:blue;
       text-align: center;
      }
 
@@ -392,18 +417,22 @@ footer {
 
      .partie_SNES{
       margin: 50px;
+      text-align: center;
      }
 
      .partie_NES{
       margin: 50px;
+      text-align: center;
      }
 
      .partie_N64{
       margin: 50px;
+      text-align: center;
      }
 
      .partie_Gameboy{
       margin: 50px;
+      text-align: center;
      }
      
      .partie_consoles_1{
@@ -426,8 +455,7 @@ footer {
       align-self: center;
       flex-direction: row;
       justify-content: center;
-      margin: 10px;
-      
+      margin: 10px;      
     }
 
     /*Personnages iconiques*/
@@ -447,10 +475,10 @@ footer {
     }
 
     /* Vidéo documentaire */
-  .section_vidéo_documentaire{
+   .section_vidéo_documentaire{
     margin-top: 100px;
     margin-bottom: 200px;
-  }
+   }
   }
 
   /*Fin format Smartphone/ Téléphone */
