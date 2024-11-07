@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="tournois.css" />
-    <link rel="stylesheet" href="tournois.html">
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
@@ -17,7 +16,133 @@
     <title>Document</title>
 </head>
 <body>
-<header></header>
+<header>
+    <div class="navbar">
+        <a class="logo">
+            <img class="logo1" src="images/logo1.png" alt="" />
+            <p class="titre">Le Back-to-Pixel Festival</p>
+        </a>
+        <ul class="links">
+            <li class="rendu-plus-gros"><a href="tournoi.html">Tournois</a></li>
+            <li class="rendu-plus-gros">
+                <a href="expo.html">Exposition de Consoles Rétro</a>
+            </li>
+            <li class="rendu-plus-gros">
+                <a href="Histoire_de_nintendo_index.html">Histoire de Nintendo</a>
+            </li>
+            <li class="rendu-plus-gros">
+                <a href="rencontre_Shigeru_Miyamoto.html"
+                >Rencontre avec Shigeru Miyamoto</a
+                >
+            </li>
+
+            <ul class="liste-deroulante">
+                <li>
+                    <a href="#">Autres ⬇</a>
+                </li>
+                <ul class="submenu">
+                    <li>
+                        <a href="ateliers_et_activités.html">Ateliers et Activités</a>
+                    </li>
+                    <li>
+                        <a href="programme_du_festival.html">Programme du Festival</a>
+                    </li>
+                    <li>
+                        <a href="partenaires_et_sponsors.html"
+                        >Partenaires et Sponsors</a
+                        >
+                    </li>
+                    <li>
+                        <a href="boutique_de_produits_dérivés"
+                        >Boutique de produits Dérivés</a
+                        >
+                    </li>
+                    <li>
+                        <a href="accréditation_presse_et_média.html">Presse et Média</a>
+                    </li>
+                </ul>
+            </ul>
+        </ul>
+        <div class="burger-menu-button">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="burger-menu">
+        <ul class="links">
+            <li><a href="tournoi.html">Tournois</a></li>
+            <li><a href="expo.html">Exposition de Consoles Rétro</a></li>
+            <li>
+                <a href="Histoire_de_nintendo_index.html">Histoire de Nintendo</a>
+            </li>
+            <li>
+                <a href="rencontre_Shigeru_Miyamoto.html"
+                >Rencontre avec Shigeru Miyamoto</a
+                >
+            </li>
+            <input type="checkbox" class="menuToggle" id="menu-toggle" />
+            <li id="lol">Autres</li>
+
+            <ul class="liste-deroulante" id="toDisplay">
+                <!-- <label for="#">Autres</label> -->
+
+                <li>
+                    <a href="ateliers_et_activités.html">Ateliers et Activités</a>
+                </li>
+                <li>
+                    <a href="programme_du_festival.html">Programme du Festival</a>
+                </li>
+                <li>
+                    <a href="partenaires_et_sponsors.html">Partenaires et Sponsors</a>
+                </li>
+                <li>
+                    <a href="boutique_de_produits_dérivés"
+                    >Boutique de produits Dérivés</a
+                    >
+                </li>
+                <li>
+                    <a href="accréditation_presse_et_média.html">Presse et Média</a>
+                </li>
+            </ul>
+            <div class="divider"></div>
+        </ul>
+    </div>
+    <div class="padding-pour-test"></div>
+</header>
+
+<script>
+    const burgerMenuButton = document.querySelector(".burger-menu-button");
+    const lol = document.querySelector("#lol");
+    const lol2 = document.querySelector("#toDisplay");
+
+    const burgerMenuButtonIcon = document.querySelector(
+        ".burger-menu-button i"
+    );
+    const burgerMenu = document.querySelector(".burger-menu");
+
+    burgerMenuButton.onclick = function () {
+        burgerMenu.classList.toggle("open");
+        const isOpen = burgerMenu.classList.contains("open");
+        burgerMenuButtonIcon.classList = isOpen
+            ? "fa-solid fa-xmark"
+            : "fa-solid fa-bars";
+    };
+    lol.onclick = function () {
+        console.log(lol2.style.display);
+        if (lol2.style.display == "block") {
+            lol2.setAttribute("style", "display:none !important;");
+        } else {
+            lol2.setAttribute("style", "display:block !important;");
+        }
+    };
+    const autreBtn = document.querySelector(".menuToggle");
+    autreBtn.onclick = function () {
+        // autreBtn.classList.toggle("visible");
+        document.querySelector(".open").style.height = "800px";
+    };
+</script>
+<div class="div-boutton-connecter">
+    <a class="boutton-connecter" href="Se-connecter.html">Se connecter</a>
+</div>
 <main>
     <section>
         <div class="jolie">

@@ -263,6 +263,7 @@
 
 .inscription{
     border-radius: 4%;
+    background-color: white;
     width: 70%;
     height:520px;
     margin: 100px 10% 0 10%;
@@ -322,7 +323,7 @@
     display: none;
     position: relative;
     z-index: 3;
-    float: inline-end;
+    float: right;
     padding-top: 220px;
 }
 
