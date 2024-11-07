@@ -13,8 +13,138 @@
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab:wght@100..900&display=swap");
     </style>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
 </head>
 <body>
+<header>
+    <div class="navbar">
+        <a class="logo">
+            <img class="logo1" src="images/logo1.png" alt="" />
+            <p class="titre">Le Back-to-Pixel Festival</p>
+        </a>
+        <ul class="links">
+            <li class="rendu-plus-gros"><a href="tournoi.html">Tournois</a></li>
+            <li class="rendu-plus-gros">
+                <a href="expo.html">Exposition de Consoles Rétro</a>
+            </li>
+            <li class="rendu-plus-gros">
+                <a href="Histoire_de_nintendo_index.html">Histoire de Nintendo</a>
+            </li>
+            <li class="rendu-plus-gros">
+                <a href="rencontre_Shigeru_Miyamoto.html"
+                >Rencontre avec Shigeru Miyamoto</a
+                >
+            </li>
+
+            <ul class="liste-deroulante">
+                <li>
+                    <a href="#">Autres ⬇</a>
+                </li>
+                <ul class="submenu">
+                    <li>
+                        <a href="ateliers_et_activités.html">Ateliers et Activités</a>
+                    </li>
+                    <li>
+                        <a href="programme_du_festival.html">Programme du Festival</a>
+                    </li>
+                    <li>
+                        <a href="partenaires_et_sponsors.html"
+                        >Partenaires et Sponsors</a
+                        >
+                    </li>
+                    <li>
+                        <a href="boutique_de_produits_dérivés"
+                        >Boutique de produits Dérivés</a
+                        >
+                    </li>
+                    <li>
+                        <a href="accréditation_presse_et_média.html">Presse et Média</a>
+                    </li>
+                </ul>
+            </ul>
+        </ul>
+        <div class="burger-menu-button">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="burger-menu">
+        <ul class="links">
+            <li><a href="tournoi.html">Tournois</a></li>
+            <li><a href="expo.html">Exposition de Consoles Rétro</a></li>
+            <li>
+                <a href="Histoire_de_nintendo_index.html">Histoire de Nintendo</a>
+            </li>
+            <li>
+                <a href="rencontre_Shigeru_Miyamoto.html"
+                >Rencontre avec Shigeru Miyamoto</a
+                >
+            </li>
+            <input type="checkbox" class="menuToggle" id="menu-toggle" />
+            <li id="lol">Autres</li>
+
+            <ul class="liste-deroulante" id="toDisplay">
+                <!-- <label for="#">Autres</label> -->
+
+                <li>
+                    <a href="ateliers_et_activités.html">Ateliers et Activités</a>
+                </li>
+                <li>
+                    <a href="programme_du_festival.html">Programme du Festival</a>
+                </li>
+                <li>
+                    <a href="partenaires_et_sponsors.html">Partenaires et Sponsors</a>
+                </li>
+                <li>
+                    <a href="boutique_de_produits_dérivés"
+                    >Boutique de produits Dérivés</a
+                    >
+                </li>
+                <li>
+                    <a href="accréditation_presse_et_média.html">Presse et Média</a>
+                </li>
+            </ul>
+            <div class="divider"></div>
+        </ul>
+    </div>
+</header>
+
+<script>
+    const burgerMenuButton = document.querySelector(".burger-menu-button");
+    const lol = document.querySelector("#lol");
+    const lol2 = document.querySelector("#toDisplay");
+
+    const burgerMenuButtonIcon = document.querySelector(
+        ".burger-menu-button i"
+    );
+    const burgerMenu = document.querySelector(".burger-menu");
+
+    burgerMenuButton.onclick = function () {
+        burgerMenu.classList.toggle("open");
+        const isOpen = burgerMenu.classList.contains("open");
+        burgerMenuButtonIcon.classList = isOpen
+            ? "fa-solid fa-xmark"
+            : "fa-solid fa-bars";
+    };
+    lol.onclick = function () {
+        console.log(lol2.style.display);
+        if (lol2.style.display == "block") {
+            lol2.setAttribute("style", "display:none !important;");
+        } else {
+            lol2.setAttribute("style", "display:block !important;");
+        }
+    };
+    const autreBtn = document.querySelector(".menuToggle");
+    autreBtn.onclick = function () {
+        // autreBtn.classList.toggle("visible");
+        document.querySelector(".open").style.height = "800px";
+    };
+</script>
 <section class="all">
     <section>
         <h1>Exposition de consoles rétro</h1>
@@ -37,7 +167,7 @@
                             <h3>Contactez-moi</h3>
                             <div>
                                 <label>Prénom :</label>
-                                <input type="text" required/>
+                                <input required type="text"/>
                             </div>
                             <div>
                                 <label>Nom :</label>
@@ -92,18 +222,28 @@
         <section class="section-jeux">
             <h2>Les jeux emblématiques</h2>
             <div class="grid-jeux">
-                <div class="div-grid-jeux" id="grid-jeux1"><img alt="" class="img-jeux-expo" src="images/street-fighter.webp">
+                <div class="div-grid-jeux" id="grid-jeux1"><img alt="" class="img-jeux-expo"
+                                                                src="images/street-fighter.webp">
                     <h3>Street Fighter 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto doloremque magnam voluptas. Alias blanditiis commodi cum debitis deleniti ducimus ex in nobis placeat quidem reiciendis sapiente, sint tempore temporibus veritatis.</p></div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto doloremque magnam voluptas.
+                        Alias blanditiis commodi cum debitis deleniti ducimus ex in nobis placeat quidem reiciendis
+                        sapiente, sint tempore temporibus veritatis.</p></div>
                 <div class="div-grid-jeux" id="grid-jeux2"><img alt="" class="img-jeux-expo" src="images/tetris.gif">
                     <h3>Tetris</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi consectetur cupiditate, distinctio dolores fugiat labore maiores neque nesciunt nisi nostrum nulla officia optio perferendis quae vitae voluptatem? Delectus, veritatis?</p></div>
-                <div class="div-grid-jeux" id="grid-jeux3"><img alt="" class="img-jeux-expo" src="images/jaquette-castlevanie.png">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi consectetur cupiditate,
+                        distinctio dolores fugiat labore maiores neque nesciunt nisi nostrum nulla officia optio
+                        perferendis quae vitae voluptatem? Delectus, veritatis?</p></div>
+                <div class="div-grid-jeux" id="grid-jeux3"><img alt="" class="img-jeux-expo"
+                                                                src="images/jaquette-castlevanie.png">
                     <h3>Castlevania 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dicta dolorem et excepturi, explicabo in, incidunt non quia quisquam rem saepe sed sequi vel voluptates voluptatibus. Aliquam odio sint velit.</p></div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dicta dolorem et excepturi,
+                        explicabo in, incidunt non quia quisquam rem saepe sed sequi vel voluptates voluptatibus.
+                        Aliquam odio sint velit.</p></div>
                 <div class="div-grid-jeux" id="grid-jeux4"><img alt="" class="img-jeux-expo" src="images/mario64.jpg">
                     <h3>Mario 64</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aut cum excepturi, fuga iusto, laudantium nihil, nobis nostrum quia quod rem sint tempora? Labore nesciunt obcaecati quis reiciendis tempora.</p></div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aut cum excepturi, fuga iusto,
+                        laudantium nihil, nobis nostrum quia quod rem sint tempora? Labore nesciunt obcaecati quis
+                        reiciendis tempora.</p></div>
             </div>
         </section>
         <section class="crenaux-reservation">
@@ -144,38 +284,38 @@
                 </tr>
                 </tbody>
             </table>
-            <a href="#popup-reservation" class="original-button">Button</a>
-            <div id="popup-reservation" class="overlay">
+            <a class="original-button" href="#popup-reservation">Button</a>
+            <div class="overlay" id="popup-reservation">
                 <div class="div-popup-réservation">
                     <h2>Réservez un crénaux</h2>
                     <a class="close" href="#">&times;</a>
                     <div class="popup-reservation-content">
-                        <form class="form-jour" action="">
+                        <form action="" class="form-jour">
                             <label class="label-jour-sem" for="jour-sem">Lundi</label>
-                            <input type="radio" name="jour-sem" id="jour-sem">
+                            <input id="jour-sem" name="jour-sem" type="radio">
                             <label class="label-jour-sem" for="jour-sem">Mardi</label>
-                            <input type="radio" name="jour-sem" id="jour-sem">
+                            <input id="jour-sem" name="jour-sem" type="radio">
                             <label class="label-jour-sem" for="jour-sem">Mercredi</label>
-                            <input type="radio" name="jour-sem" id="jour-sem">
+                            <input id="jour-sem" name="jour-sem" type="radio">
                             <label class="label-jour-sem" for="jour-sem">Jeudi</label>
-                            <input type="radio" name="jour-sem" id="jour-sem">
+                            <input id="jour-sem" name="jour-sem" type="radio">
                             <label class="label-jour-sem" for="jour-sem">Vendredi</label>
-                            <input type="radio" name="jour-sem" id="jour-sem">
+                            <input id="jour-sem" name="jour-sem" type="radio">
                             <label class="label-jour-sem" for="jour-sem">Samedi</label>
-                            <input type="radio" name="jour-sem" id="jour-sem">
+                            <input id="jour-sem" name="jour-sem" type="radio">
                             <br>
                             <div class="div-form-barre-haut">
-                            <label class="label-jour-sem" for="moment-journée">Matin</label>
-                            <input type="checkbox" name="moment-journée" id="jour-sem">
-                            <label class="label-jour-sem" for="moment-journée">Aprés-midi</label>
-                            <input type="checkbox" name="moment-journée" id="jour-sem">
+                                <label class="label-jour-sem" for="moment-journée">Matin</label>
+                                <input id="jour-sem" name="moment-journée" type="checkbox">
+                                <label class="label-jour-sem" for="moment-journée">Aprés-midi</label>
+                                <input id="jour-sem" name="moment-journée" type="checkbox">
                             </div>
                             <div class="div-form-barre-haut">
                                 <label class="label-jour-sem" for="nom">Nom</label>
-                                <input type="text" name="nom" id="nom-form-crenaux">
+                                <input id="nom-form-crenaux" name="nom" type="text">
                                 <br>
                                 <label class="label-jour-sem" for="nom">Prénom</label>
-                                <input type="text" name="prénom" id="nom-form-crenaux">
+                                <input id="nom-form-crenaux" name="prénom" type="text">
                             </div>
                             <div class="boutton-crenaux">
                                 <button class="boutton-send-crenaux" type="submit">Envoyer</button>
@@ -190,28 +330,32 @@
             <div class="box">
                 <a class="glow-on-hover" href="#popup1"><span class="hover-color">Rerservez vos billets</span></a>
             </div>
-            <div id="popup1" class="overlay-billets">
+            <div class="overlay-billets" id="popup1">
                 <div class="popup-billets">
                     <h2>Prenez vos billets</h2>
                     <a class="close-billets" href="#">&times;</a>
                     <div class="content-billets">
-                        <form action=""><div class="div-form-barre-haut">
-                            <label class="label-jour-sem" for="nom">Nom</label>
-                            <input placeholder="ex: Bezos" type="text" name="nom" id="nom-form-crenaux">
-                            <br>
-                            <label class="label-jour-sem" for="nom">Prénom</label>
-                            <input placeholder="ex: Robert" type="text" name="prénom" id="nom-form-crenaux"><br>
-                            <label class="label-jour-sem" for="nom">Email</label>
-                            <input type="email" placeholder="ex:robert(arnaud)@gmail.com" name="email" id="nom-form-crenaux">
-                            <br>
-                            <label class="label-jour-sem" for="nom">Numéro</label>
-                            <input type="tel" placeholder="ex: 69696969" name="email" id="nom-form-crenaux"><br>
-                            <label class="label-jour-sem" for="nom">Nombre de billets</label>
-                            <input type="number" min="1" max="999" placeholder="2" name="email" id="nom-form-crenaux"><br>
-                            <div class="wrap">
-                                <button class="button-buy">Acheter</a>
+                        <form action="">
+                            <div class="div-form-barre-haut">
+                                <label class="label-jour-sem" for="nom">Nom</label>
+                                <input id="nom-form-crenaux" name="nom" placeholder="ex: Bezos" type="text">
+                                <br>
+                                <label class="label-jour-sem" for="nom">Prénom</label>
+                                <input id="nom-form-crenaux" name="prénom" placeholder="ex: Robert" type="text"><br>
+                                <label class="label-jour-sem" for="nom">Email</label>
+                                <input id="nom-form-crenaux" name="email" placeholder="ex:robert(arnaud)@gmail.com"
+                                       type="email">
+                                <br>
+                                <label class="label-jour-sem" for="nom">Numéro</label>
+                                <input id="nom-form-crenaux" name="email" placeholder="ex: 69696969" type="tel"><br>
+                                <label class="label-jour-sem" for="nom">Nombre de billets</label>
+                                <input id="nom-form-crenaux" max="999" min="1" name="email" placeholder="2"
+                                       type="number"><br>
+                                <div class="wrap">
+                                    <button class="button-buy">Acheter</a>
+                                </div>
                             </div>
-                        </div> </form>
+                        </form>
                     </div>
                 </div>
             </div>
