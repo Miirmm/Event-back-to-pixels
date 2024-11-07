@@ -223,7 +223,7 @@ a .logo {
     border: 3px ridge darkblue ;
     border-radius: 15% 15% 25% 25%;
     background-position: 40% 50%;
-    transition: all 10 ease;
+    transition: all 10s ease;
     animation: scroll 10s linear alternate infinite;
 
 

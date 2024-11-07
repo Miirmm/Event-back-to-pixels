@@ -23,7 +23,7 @@ body {
 }
 
 nav {
-	scale: 2px;
+	scale:2px;
 }
 
 .logo {
@@ -195,10 +195,13 @@ a .logo {
 	border: 3px ridge darkblue ;
 	border-radius: 15% 15% 25% 25%;
 	background-position: 40% 50%;
-	transition: all 10 ease;
-    animation: scroll 10s linear alternate infinite;
+	animation: scroll 10s linear alternate infinite;
 	
 
+}
+
+.submenu {
+	transition: all 10s ease;
 }
 
 @keyframes scroll{
@@ -382,11 +385,14 @@ input[type="checkbox"] {
   }
 
   .deuxieme-fond {
-	background-color: rgba(rgb(7, 7, 7), 0.8);
-	opacity: 1;
+	  opacity: 1;
   }
-  
-  input[type="checkbox"]:checked + label + .text {
+
+.deuxieme-fond {
+	background-color: rgba(rgb (7, 7, 7), 0.8);
+}
+
+input[type="checkbox"]:checked + label + .text {
 	display: block;
   }
 
