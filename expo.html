@@ -37,7 +37,7 @@
                             <h3>Contactez-moi</h3>
                             <div>
                                 <label>Prénom :</label>
-                                <input type="text"/>
+                                <input type="text" required/>
                             </div>
                             <div>
                                 <label>Nom :</label>
@@ -181,6 +181,37 @@
                                 <button class="boutton-send-crenaux" type="submit">Envoyer</button>
                             </div>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-reservation-billet">
+            <h2>Réservez vos billets</h2>
+            <div class="box">
+                <a class="glow-on-hover" href="#popup1"><span class="hover-color">Rerservez vos billets</span></a>
+            </div>
+            <div id="popup1" class="overlay-billets">
+                <div class="popup-billets">
+                    <h2>Prenez vos billets</h2>
+                    <a class="close-billets" href="#">&times;</a>
+                    <div class="content-billets">
+                        <form action=""><div class="div-form-barre-haut">
+                            <label class="label-jour-sem" for="nom">Nom</label>
+                            <input placeholder="ex: Bezos" type="text" name="nom" id="nom-form-crenaux">
+                            <br>
+                            <label class="label-jour-sem" for="nom">Prénom</label>
+                            <input placeholder="ex: Robert" type="text" name="prénom" id="nom-form-crenaux"><br>
+                            <label class="label-jour-sem" for="nom">Email</label>
+                            <input type="email" placeholder="ex:robert(arnaud)@gmail.com" name="email" id="nom-form-crenaux">
+                            <br>
+                            <label class="label-jour-sem" for="nom">Numéro</label>
+                            <input type="tel" placeholder="ex: 69696969" name="email" id="nom-form-crenaux"><br>
+                            <label class="label-jour-sem" for="nom">Nombre de billets</label>
+                            <input type="number" min="1" max="999" placeholder="2" name="email" id="nom-form-crenaux"><br>
+                            <div class="wrap">
+                                <button class="button-buy">Acheter</a>
+                            </div>
+                        </div> </form>
                     </div>
                 </div>
             </div>
