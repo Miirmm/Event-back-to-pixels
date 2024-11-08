@@ -339,7 +339,20 @@ input[type="checkbox"]:checked + label + .text {
     background-image: url(https://www.dokodemo.fr/wp-content/uploads/2019/03/salle-arcade-mikado.jpg);
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.jolie h1{
+    margin: 10% 5% 20% 5%;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    line-height: 2;
+}
+
+.jolie span{
+    text-transform: uppercase;
 }
 
 .jolie button{
