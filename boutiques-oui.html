@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="Logo_favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="boutique-oui.css" />
+
+    <title>Back to Pixel</title>
+    <meta />
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <a class="logo">
+          <img class="logo1" src="images/logo1.png" alt="" />
+          <p class="titre">Le Back-to-Pixel Festival</p>
+        </a>
+        <ul class="links">
+          <li class="rendu-plus-gros"><a href="tournoi.html">Tournois</a></li>
+          <li class="rendu-plus-gros">
+            <a href="expo.html">Exposition de Consoles Rétro</a>
+          </li>
+          <li class="rendu-plus-gros">
+            <a href="Histoire_de_nintendo_index.html">Histoire de Nintendo</a>
+          </li>
+          <li class="rendu-plus-gros">
+            <a href="rencontre_Shigeru_Miyamoto.html"
+              >Rencontre avec Shigeru Miyamoto</a
+            >
+          </li>
+
+          <ul class="liste-deroulante">
+            <li>
+              <a href="#">Autres ⬇</a>
+            </li>
+            <ul class="submenu">
+              <li>
+                <a href="ateliers_et_activités.html">Ateliers et Activités</a>
+              </li>
+              <li>
+                <a href="programme_du_festival.html">Programme du Festival</a>
+              </li>
+              <li>
+                <a href="partenaires_et_sponsors.html"
+                  >Partenaires et Sponsors</a
+                >
+              </li>
+              <li>
+                <a href="boutique_de_produits_dérivés"
+                  >Boutique de produits Dérivés</a
+                >
+              </li>
+              <li>
+                <a href="accréditation_presse_et_média.html">Presse et Média</a>
+              </li>
+            </ul>
+          </ul>
+        </ul>
+        <div class="burger-menu-button">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="burger-menu">
+        <ul class="links">
+          <li><a href="tournoi.html">Tournois</a></li>
+          <li><a href="expo.html">Exposition de Consoles Rétro</a></li>
+          <li>
+            <a href="Histoire_de_nintendo_index.html">Histoire de Nintendo</a>
+          </li>
+          <li>
+            <a href="rencontre_Shigeru_Miyamoto.html"
+              >Rencontre avec Shigeru Miyamoto</a
+            >
+          </li>
+          <input type="checkbox" class="menuToggle" id="menu-toggle" />
+          <li id="lol">Autres</li>
+
+          <ul class="liste-deroulante" id="toDisplay">
+            <!-- <label for="#">Autres</label> -->
+
+            <li>
+              <a href="ateliers_et_activités.html">Ateliers et Activités</a>
+            </li>
+            <li>
+              <a href="programme_du_festival.html">Programme du Festival</a>
+            </li>
+            <li>
+              <a href="partenaires_et_sponsors.html">Partenaires et Sponsors</a>
+            </li>
+            <li>
+              <a href="boutique_de_produits_dérivés"
+                >Boutique de produits Dérivés</a
+              >
+            </li>
+            <li>
+              <a href="accréditation_presse_et_média.html">Presse et Média</a>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </ul>
+      </div>
+    </header>
+
+    <script>
+      const burgerMenuButton = document.querySelector(".burger-menu-button");
+      const lol = document.querySelector("#lol");
+      const lol2 = document.querySelector("#toDisplay");
+
+      const burgerMenuButtonIcon = document.querySelector(
+        ".burger-menu-button i"
+      );
+      const burgerMenu = document.querySelector(".burger-menu");
+
+      burgerMenuButton.onclick = function () {
+        burgerMenu.classList.toggle("open");
+        const isOpen = burgerMenu.classList.contains("open");
+        burgerMenuButtonIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+      lol.onclick = function () {
+        console.log(lol2.style.display);
+        if (lol2.style.display == "block") {
+          lol2.setAttribute("style", "display:none !important;");
+        } else {
+          lol2.setAttribute("style", "display:block !important;");
+        }
+      };
+      const autreBtn = document.querySelector(".menuToggle");
+      autreBtn.onclick = function () {
+        // autreBtn.classList.toggle("visible");
+        document.querySelector(".open").style.height = "800px";
+      };
+    </script>
+
+    <!--                       ELEMENT DE VOS PAGES             ICI ICI !!!!!!                    -->
+
+    <div class="boutique-fond">
+      <p class="titre-boutique">Boutique :</p>
+      <div class="boutique-alignement">
+        <img
+          class="image-boutique"
+          src="https://m.media-amazon.com/images/S/aplus-media/vc/966819f7-b14f-4059-a7b3-14d6135d5268.jpg"
+        />
+        <p class="paragraphe-boutique">
+          Revivez les jeux classiques des années 80 avec nos consoles de jeux
+          portables qui comprennent une grande variété de jeux tels que
+          l'action, la stratégie, les jeux de plateforme et plus encore <br />
+          Préchargé avec 150 jeux de poche portables 8 bits amusants et
+          stimulants intégrés pour des heures de divertissement. Un excellent
+          ajout à toute collection de consoles de jeux.
+        </p>
+      </div>
+
+      <div class="boutique-alignement-deux">
+        <p class="paragraphe-boutique-deux">
+          Les Game & Watch. Rien que d’en parler, nos plus beaux souvenirs
+          d’enfance refont surface. Assis dans le canapé du salon, en écoutant
+          des cassettes de Renaud, avec du désinfectant rouge sur nos genoux
+          blessés, on découvrait ébahis les premières consoles de poche de la
+          marque Nintendo.<br />
+          Les mythiques Game & Watch, avec leurs écrans à cristaux liquides, qui
+          se glissaient dans la poche du jean. Ils fonctionnaient avec deux
+          piles boutons, qu’il fallait souvent remplacer car les jeux étaient
+          très gourmands à l’époque et les piles n’avaient pas l’autonomie de
+          nos batteries actuelles.
+        </p>
+        <img
+          class="image-boutique-deux"
+          src="https://static.actu.fr/uploads/2022/06/20220616-212223.jpg"
+        />
+      </div>
+      <p>Si vous voulez acheter :</p>
+      <button class="boutton-boutique">
+        <a
+          href="https://www.amazon.fr/?tag=hydfrabkm-21&ref=pd_sl_781ozcfkwe_e&adgrpid=1362295842742589&hvadid=85143748759658&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=126121&hvtargid=kwd-85144014621571:loc-66&hydadcr=11802_1930447&msclkid=099a47626d1712368f17204f8b4f924b"
+          >Acheter</a
+        >
+      </button>
+    </div>
+
+    <!--                            FIN D'UNE DE VOS PAGES            FINI FINI !!!!!                           -->
+
+    <!--                                                DEBUT DU FOOTER               -->
+    <footer class="example-1">
+      <div class="footer-container">
+        <div class="footer-col">
+          <div class="centrage-footer">
+            <h4>Lieu :</h4>
+            <br />
+            <p>Voici l'adresse pour nous rejoindres :</p>
+            <br />
+            <iframe
+              class="maps-taille"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2594.293122449874!2d1.1008915125892296!3d49.441176671297946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e0df1548cd768b%3A0x70b4b34959b1ec9f!2sNeed%20for%20School!5e0!3m2!1sfr!2sfr!4v1730827755843!5m2!1sfr!2sfr"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+        <!--                              2eme categorie du footer (  du milieu  )                     -->
+        <div class="centrage-footer">
+          <div class="footer-col">
+            <h4>Contact options :</h4>
+            <br />
+
+            <p class="alignement-logo-texte">
+              <img class="taille-icon" src="images/logo-gmail.png" />
+              &nbsp; Notre : &nbsp;
+              <a class="souligné-ref" href="super.email@example.com">Email</a>
+            </p>
+            <br />
+
+            <p class="alignement-logo-texte">
+              <img class="taille-icon" src="images/logo-whatsapp.png" />
+              &nbsp; Voici : &nbsp;
+              <a class="souligné-ref" href="tel:+31 0605050606"> Téléphone</a>
+            </p>
+            <br />
+
+            <p class="alignement-logo-texte">
+              <svg
+                class="taille-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="#74C0FC"
+                  d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"
+                />
+              </svg>
+              &nbsp; Notre : &nbsp;
+              <a class="souligné-ref" href="https://fr-fr.facebook.com/">
+                Facebook</a
+              >
+            </p>
+            <br />
+
+            <p class="alignement-logo-texte">
+              <img class="taille-icon" src="images/logo-instagram.png" />
+              &nbsp; Voici : &nbsp;
+              <a class="souligné-ref" href="https://www.instagram.com/"
+                >Instagram</a
+              >
+            </p>
+          </div>
+        </div>
+        <!--                       derniere categorie du footer (  sitemap  )            -->
+        <div class="centrage-footer">
+          <div class="footer-col">
+            <h4>Sitemap :</h4>
+            <br />
+            <div class="decalage-footer">
+              <ul>
+                <li>
+                  <a href="tournoi.html">Tournois</a>
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-tournoi.png"
+                  />
+                </li>
+
+                <li>
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-exposition.png"
+                  />
+                  <a href="expo.html">Exposition de Consoles Rétro</a>
+                </li>
+
+                <li>
+                  <a href="Histoire_de_nintendo_index.html"
+                    >Histoire de Nintendo</a
+                  >
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-histoire.png"
+                  />
+                </li>
+
+                <li>
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-rencontre.png"
+                  />
+                  <a href="rencontre_Shigeru_Miyamoto.html"
+                    >Rencontre avec Shigeru Miyamoto</a
+                  >
+                </li>
+
+                <li>
+                  <a href="ateliers_et_activités.html">Ateliers et Activités</a>
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-atelier.png"
+                  />
+                </li>
+
+                <li>
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-programme.png"
+                  />
+                  <a href="programme_du_festival.html">Programme du Festival</a>
+                </li>
+
+                <li>
+                  <a href="partenaires_et_sponsors.html"
+                    >Partenaires et Sponsors</a
+                  >
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-investisseur.png"
+                  />
+                </li>
+
+                <li>
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-boutique.png"
+                  />
+                  <a href="boutique_de_produits_dérivés"
+                    >Boutique de Produits Dérivés</a
+                  >
+                </li>
+
+                <li>
+                  <a href="accréditation_presse_et_média.html"
+                    >Accréditations Presse et Médias</a
+                  >
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-media.png"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottombar">
+        Copyright © 2024 - Back to Pixels /
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+    </footer>
+  </body>
+</html>
