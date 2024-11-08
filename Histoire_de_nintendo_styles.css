@@ -231,7 +231,7 @@ footer p{
   .description_consoles{
     text-align: left;
     width: 90%;
-    font-size: 15px;
+    font-size: 1.5rem;
     margin: 1rem;
   }
 
@@ -272,7 +272,7 @@ footer p{
    .description_personnages_iconiques{
     text-align: left;
     width: 90%;
-    font-size: 15px;
+    font-size: 1.5rem;
     margin: auto;
   }
 
@@ -336,6 +336,7 @@ footer p{
 
    .Nom_consoles{
     text-align: center;
+    font-size: 30px;
     margin-top: 100px;
    }
 
@@ -351,9 +352,9 @@ footer p{
   .description_consoles{
     text-align: center;
     width: 90%;
-    font-size: 15px;
+    font-size: 1.5rem;
     margin: auto;
-    margin-top: 50px;
+    margin-bottom: 6rem;
   }
 
   .partie_consoles_1{
@@ -363,6 +364,7 @@ footer p{
 
   .partie_consoles_2{
     display: flex;
+    margin-top: 500px;
     margin-bottom: 400px;
   }
 
@@ -381,7 +383,7 @@ footer p{
    .description_personnages_iconiques{
     text-align: center;
     width: 90%;
-    font-size: 15px;
+    font-size: 1.5rem;
     margin: auto;
   }
 
@@ -496,7 +498,7 @@ footer p{
      .description_personnages_iconiques{
       text-align: center;
       width: 90%;
-      font-size: 15px;
+      font-size: 1.5rem;
       margin: 5rem;
       margin-bottom: 8rem;
     }
