@@ -7,54 +7,386 @@
     --titre: "Press Start 2P", system-ui;
     --font2: "Roboto Slab", serif;
 }
-*{
+
+* {
     font-family: var(--font2);
     color: var(--text);
     word-wrap: anywhere;
 }
-.all{
+
+.all {
     margin-left: 2rem;
     margin-right: 2rem;
     background-color: var(--background);
 }
 
-body{
+body {
     background: linear-gradient(rgb(0, 0, 0), var(--primary));
     background-attachment: fixed;
 }
-h1{
+
+
+
+
+
+nav {
+
+    font-size: 0.3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo1 {
+    border-radius: 40% 00% 40% 00%;
+}
+
+.navbar a {
+    transition: 0.4s;
+    scale: 1.2;
+    word-wrap: normal;
+
+}
+
+.rendu-plus-gros:hover {
+    scale: 1.2;
+}
+
+img.logo1 {
+    width: 105px;
+    height: 105px;
+    margin-left: 1rem;
+}
+
+
+.links li {
+    list-style: none;
+    /* border: 2px solid blue;
+    border-radius: 8%;
+    background-color: transparent rgba(0, 0, 0, 0.8); */
+    transition: 0.3s;
+    scale: 1;
+}
+
+
+header {
+    position: relative;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background-color: transparent;
+}
+
+/*                                   NAVBAR                    */
+
+.navbar{
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s;
+    scale: 1;
+
+}
+
+div.navbar a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+
+div.navbar a:hover {
+    color: var(--secondary);
+}
+
+div.burger-menu a:hover {
+    color: var(--secondary);
+}
+
+.navbar .logo a {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .burger-menu-button {
+    color: var(--text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+img .logo1 {
+    text-align: start;
+}
+
+.titre {
+    margin-right: 0px;
+    font-family: var(--titre);
+    font-size: 0.5rem;
+}
+/*                                           boutton du menu burger                            */
+
+.action-button {
+    background-color: red;
+    color: #120d31;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 180px;
+}
+
+div.burger-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    word-wrap: normal;
+}
+
+.action-button:hover {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.pro {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.pro:hover {
+    background-color: #fff;
+    color: #120d31;
+}
+
+.burger-menu ul .liste-deroulante {
+    text-align: center;
+    transition: 0.3s;
+    scale: 1;
+}
+/*                       Liste déroulante de la catégorie Autres                         */
+
+.links {
+    text-align: center;
+}
+
+.liste-deroulante {
+    display: block;
+    position: relative;
+    padding-right: 50px;
+}
+.links ul .liste-deroulante {
+    text-align: center;
+    transition: 0.3s;
+    scale: 1;
+    padding-right: 40px;
+}
+
+.submenu {
+    display: none	;
+    padding-top: 20px;
+    position: absolute;
+    color: transparent;
+    left: 0;
+    background-image: url(https://wallpaperboat.com/wp-content/uploads/2020/03/retro-gaming-25.jpg);
+    list-style: none;
+    border: 3px ridge darkblue ;
+    border-radius: 15% 15% 25% 25%;
+    background-position: 40% 50%;
+    transition: all 10 ease;
+    animation: scroll 10s linear alternate infinite;
+    padding-right: 20px;
+}
+
+@keyframes scroll{
+
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 100%;
+    }
+}
+
+.submenu li {
+    padding: 12px 12px 12px 12px;
+}
+
+.liste-deroulante:hover .submenu{
+    display: block;
+}
+
+/*                                             burger menu                                        */
+
+.burger-menu {
+    display: none;
+    height: 0;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+ul .submenu {
+    text-align: center;
+}
+
+.burger-menu.open {
+    height: 680px;
+
+}
+
+.burger-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divider {
+    height: 1px;
+    background-color: #fff;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+.burger-menu .action-button {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-burger-menu {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.boutton-connecter {
+    font-size: 50px;
+    opacity: 0.8;
+    margin: 10px;
+    text-align: center;
+    border-style: solid;
+    border-width: 50px;
+    border-image-source: url(se-connecter-bordure.png);
+    border-image-slice: 300 150 300 150; /* haut | droit | bas | gauche */
+    border-image-width: 50px;
+    color: red ;
+    background-color: green;
+}
+
+.div-boutton-connecter {
+    text-align: center;
+}
+
+.centrer-connecter {
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.text {
+    display: none;
+    font-size: 18px;
+    margin: 3em;
+    color: var(--secondary);
+    color: #121212;
+    background-image: url(fond-se-connecter.jpg);
+    height: 200px;
+    padding-top: 20px;
+}
+
+.deuxieme-fond {
+    background-color: rgba(rgb(7, 7, 7), 0.8);
+    opacity: 1;
+}
+
+input[type="checkbox"]:checked + label + .text {
+    display: block;
+}
+
+.lol2 {
+    display: block !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+h1 {
     text-align: left;
     padding-left: 2rem;
     font-size: 1.5rem;
     font-family: var(--titre);
     margin-bottom: 5rem;
     word-wrap: anywhere;
+    padding-top: 0;
+    margin-top: 0;
 }
-.banner-expo-img{
+
+.banner-expo-img {
     width: 70%;
     display: flex;
     justify-content: space-around;
     margin: auto;
 }
+
 /***********************************************************************
 bouton
  */
-#expo-inscription{
+#expo-inscription {
     margin-top: 3rem;
     margin-left: 2rem;
     text-align: center;
 }
-#expo-inscription h2{
+
+#expo-inscription h2 {
     font-family: var(--titre);
     text-align: left;
     word-wrap: anywhere;
 }
-#contact p{
+
+#contact p {
     text-align: left;
     margin-bottom: 2rem;
 }
 
-#expo-inscription button{
+#expo-inscription button {
     border-style: solid;
     border-color: var(--secondary);
     border-width: 5px;
@@ -66,7 +398,7 @@ bouton
     color: white;
 }
 
-#expo-inscription button:hover{
+#expo-inscription button:hover {
     background-color: var(--secondary);
 }
 
@@ -74,8 +406,10 @@ bouton
     visibility: hidden;
     opacity: 0;
     position: fixed;
-    top: 0; right: 0;
-    bottom: 0; left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,35 +439,35 @@ bouton
     text-decoration: none;
 }
 
-.popup_close:hover{
+.popup_close:hover {
     color: red;
 }
 
-.popup_content h3{
+.popup_content h3 {
     text-align: left;
     font-size: 30px;
     margin-top: 0px;
-    font-family: var(--titre );
+    font-family: var(--titre);
 }
 
-.popup_content input{
+.popup_content input {
     width: 100%;
     height: 20px;
     margin-bottom: 15px;
     color: black;
 }
 
-.popup_content textarea{
+.popup_content textarea {
     width: 505px;
     height: 60px;
     margin-bottom: 20px;
 }
 
-#submit{
+#submit {
     text-align: center;
 }
 
-#submit button{
+#submit button {
     border-style: solid;
     border-color: var(--secondary);
     border-width: 5px;
@@ -143,97 +477,116 @@ bouton
     color: var(--text);
 }
 
-#submit button:hover{
+#submit button:hover {
     background-color: var(--secondary);
     color: white;
     border-color: var(--secondary);
 }
+
 /***************************************************************************
 Les consoles présentées
 */
-.consoles-presentes{
+.consoles-presentes {
     margin-top: 3rem;
 }
-.consoles-presentes h2{
+
+.consoles-presentes h2 {
     font-family: var(--titre);
     margin-left: 2rem;
 }
-.grid-console{
+
+.grid-console {
     display: flex;
     justify-content: space-around;
     margin-top: 2rem;
 }
-.div-grid-console{
+
+.div-grid-console {
     display: flex;
     flex-direction: column;
     max-width: 15%;
 
 }
-.div-grid-console h3{
+
+.div-grid-console h3 {
     font-family: var(--titre);
 }
-.img-console-expo{
+
+.img-console-expo {
     object-fit: cover;
     width: 80%;
     height: 80%;
 }
+
 /**************************************************************************
 */
-.section-jeux{
+.section-jeux {
     margin-top: 3rem;
 }
-.section-jeux h2{
+
+.section-jeux h2 {
     margin-left: 2rem;
     font-family: var(--titre);
 }
-.grid-jeux{
+
+.grid-jeux {
     display: grid;
     grid-template-columns: 40% 10% 40%;
     grid-template-rows: 40% 10% 40%;
     margin-top: 2rem;
     justify-content: center;
 }
-.div-grid-jeux{
+
+.div-grid-jeux {
     display: flex;
     flex-direction: column;
     max-width: 100%;
 }
-#grid-jeux1{
+
+#grid-jeux1 {
     grid-column-start: 1;
     grid-row-start: 1;
 }
-#grid-jeux2{
+
+#grid-jeux2 {
     grid-column-start: 3;
     grid-row-start: 1;
 }
-#grid-jeux3{
+
+#grid-jeux3 {
     grid-column-start: 1;
     grid-row-start: 3;
 }
-#grid-jeux4{
+
+#grid-jeux4 {
     grid-column-start: 3;
     grid-row-start: 3;
 }
-.img-jeux-expo{
+
+.img-jeux-expo {
     object-fit: cover;
     width: 60%;
     height: 60%;
     margin: auto;
     border-radius: 5%;
 }
-.div-grid-jeux h3{
+
+.div-grid-jeux h3 {
     font-family: var(--titre);
     text-align: center;
 }
-.div-grid-jeux p{
+
+.div-grid-jeux p {
     text-align: center;
 }
+
 /**************************************************************************
 créneaux réservation*/
-.crenaux-reservation h2{
+.crenaux-reservation h2 {
     font-family: var(--titre);
     margin-left: 2rem;
 }
+
 table.darkTable {
     font-family: "Arial Black", Gadget, sans-serif;
     border: 2px solid white;
@@ -242,7 +595,7 @@ table.darkTable {
     height: 200px;
     text-align: center;
     border-collapse: collapse;
-    margin:auto;
+    margin: auto;
     box-shadow: 0 0 .2rem #fff,
     0 0 .2rem #fff,
     0 0 2rem var(--accent),
@@ -251,21 +604,26 @@ table.darkTable {
     inset 0 0 1.3rem var(--accent);
 
 }
+
 table.darkTable td, table.darkTable th {
     border: 1px solid black;
     padding: 3px 4px;
 }
+
 table.darkTable tbody td {
     font-size: 13px;
     color: #E6E6E6;
 }
+
 table.darkTable tr:nth-child(even) {
     background: #888888;
 }
+
 table.darkTable thead {
     background: #000000;
     border-bottom: 3px solid var(--text);
 }
+
 table.darkTable thead th {
     font-size: 15px;
     font-weight: bold;
@@ -273,6 +631,7 @@ table.darkTable thead th {
     text-align: center;
     border-left: 2px solid var(--background);
 }
+
 table.darkTable thead th:first-child {
     border-left: none;
 }
@@ -326,6 +685,7 @@ table.darkTable tfoot td {
     top: 0;
     left: 0;
 }
+
 .overlay {
     position: fixed;
     top: 0;
@@ -337,6 +697,7 @@ table.darkTable tfoot td {
     visibility: hidden;
     opacity: 0;
 }
+
 .overlay:target {
     visibility: visible;
     opacity: 1;
@@ -355,10 +716,10 @@ table.darkTable tfoot td {
 .div-popup-réservation h2 {
     margin-top: 1rem;
     color: var(--text);
-    font-family:var(--titre);
-    text-align: center
-;
+    font-family: var(--titre);
+    text-align: center;
 }
+
 .div-popup-réservation .close {
     position: absolute;
     top: 1%;
@@ -369,35 +730,43 @@ table.darkTable tfoot td {
     text-decoration: none;
     color: var(--secondary);
 }
+
 .div-popup-réservation .close:hover {
     color: var(--secondary);
 }
+
 .div-popup-réservation .content {
     overflow: auto;
     background-color: var(--background);
 }
-.label-jour-sem{
+
+.label-jour-sem {
     max-width: fit-content;
 }
-.label-jour-sem:after{
+
+.label-jour-sem:after {
     content: ":";
     margin-left: 6px;
 }
-.form-jour{
+
+.form-jour {
     text-align: center;
 }
-.div-form-barre-haut{
+
+.div-form-barre-haut {
     border-top: solid 1px var(--text);
     margin-bottom: 0.5rem;
     padding-top: 0.5rem;
     border-radius: 10px;
 }
-#nom-form-crenaux{
+
+#nom-form-crenaux {
     color: black;
     margin-top: 1rem;
     max-width: fit-content;
 }
-.boutton-send-crenaux{
+
+.boutton-send-crenaux {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -422,12 +791,14 @@ table.darkTable tfoot td {
     color: #fff;
     background-color: var(--primary);
 }
+
 /************************************************************************
 Réservation billet */
- .section-reservation-billet h2{
-     font-family: var(--titre);
-     margin-left: 2rem;
- }
+.section-reservation-billet h2 {
+    font-family: var(--titre);
+    margin-left: 2rem;
+}
+
 }
 .box {
     margin: auto 0;
@@ -446,6 +817,7 @@ Réservation billet */
     visibility: hidden;
     opacity: 0;
 }
+
 .overlay-billets:target {
     visibility: visible;
     opacity: 1;
@@ -466,6 +838,7 @@ Réservation billet */
     color: var(--text);
     font-family: var(--titre);
 }
+
 .popup-billets .close-billets {
     position: absolute;
     top: 20px;
@@ -476,12 +849,15 @@ Réservation billet */
     text-decoration: none;
     color: var(--text);
 }
+
 .popup-billets .close-billets:hover {
     color: var(--secondary);
 }
-.popup-billets .content-billets{
+
+.popup-billets .content-billets {
     text-align: center;
 }
+
 .glow-on-hover {
     border: none;
     outline: none;
@@ -498,7 +874,8 @@ Réservation billet */
     justify-content: space-around;
     width: 15%;
 }
-.glow-on-hover:hover{
+
+.glow-on-hover:hover {
     background: transparent;
 }
 
@@ -507,7 +884,7 @@ Réservation billet */
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
     top: -2px;
-    left:-2px;
+    left: -2px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
@@ -531,7 +908,8 @@ Réservation billet */
     opacity: 1;
     z-index: 2;
 }
-.hover-color{
+
+.hover-color {
     z-index: 999;
 }
 
@@ -548,14 +926,12 @@ Réservation billet */
 }
 
 
-
-
 .popup-billets:before {
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
     top: -2px;
-    left:-2px;
+    left: -2px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
@@ -580,7 +956,6 @@ Réservation billet */
 }
 
 
-
 .wrap {
     height: 20%;
     display: flex;
@@ -591,7 +966,7 @@ Réservation billet */
 .button-buy {
     display: inline-flex;
     font-size: 1rem;
-    z-index: 999    ;
+    z-index: 999;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
@@ -613,7 +988,7 @@ Réservation billet */
     content: '';
     z-index: 999;
     border-radius: 1000px;
-    min-width:150%;
+    min-width: 150%;
     min-height: 150%;
     border: 4px solid var(--secondary);
     position: absolute;
@@ -640,7 +1015,8 @@ Réservation billet */
 .button-buy::after {
     content: '';
     z-index: 999;
-    width: 30px; height: 30px;
+    width: 30px;
+    height: 30px;
     border-radius: 100%;
     border: 6px solid var(--secondary);
     position: absolute;
@@ -656,74 +1032,95 @@ Réservation billet */
     display: none;
     z-index: 999;
 }
+
 /**************************************************************************
  responsive
  */
-@media screen and (max-width:1023px){
-    .all{
+@media screen and (max-width: 1023px) {
+    .all {
         margin-left: 0;
         margin-right: 0;
         background-color: var(--background);
         width: 100%;
         padding: 0;
     }
-    body{
+
+    body {
         background: none;
         padding: 0;
         margin: 0;
     }
-    .banner-expo-img{
+    header{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .banner-expo-img {
         width: 70%;
-        display:none;
+        display: none;
     }
-    h1{
-        font-size: 1rem;
+
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
     }
+    h2{
+        text-align: center;
+    }
+
     /***************************************************************************
 Les consoles présentées
 */
-    .consoles-presentes h2{
+    .consoles-presentes h2 {
         font-family: var(--titre);
         margin-left: 2rem;
         text-align: center;
     }
-    .grid-console{
+
+    .grid-console {
         display: grid;
         grid-template-columns: 40% 0% 40%;
         grid-template-rows: 30% 30% 30%;
         margin-top: 2rem;
     }
-    .div-grid-console{
+
+    .div-grid-console {
         display: flex;
         flex-direction: column;
         max-width: 100%;
 
     }
-    #grid-console1{
+
+    #grid-console1 {
         grid-column-start: 1;
         grid-row-start: 1;
     }
-    #grid-console2{
+
+    #grid-console2 {
         grid-column-start: 3;
         grid-row-start: 1;
     }
-    #grid-console3{
+
+    #grid-console3 {
         grid-column-start: 1;
         grid-row-start: 3;
     }
-    #grid-console4{
+
+    #grid-console4 {
         grid-column-start: 3;
         grid-row-start: 3;
     }
 
-    .div-grid-console h3{
+    .div-grid-console h3 {
         font-family: var(--titre);
         text-align: center;
     }
-    .div-grid-console p{
+
+    .div-grid-console p {
         text-align: center;
     }
-    .img-console-expo{
+
+    .img-console-expo {
         object-fit: cover;
         width: 80%;
         height: 80%;
@@ -731,90 +1128,142 @@ Les consoles présentées
     }
 
 }
-@media screen and (max-width:767px){
-    h1{
-        font-size: 0.8rem;
+@media (max-width: 990px) {
+    header {
+        background: linear-gradient(rgb(0, 0, 0), var(--primary))     ;
     }
-    .all{
+
+    .navbar .links,
+    .navbar .action-button{
+        display: none;
+    }
+
+    .navbar .burger-menu-button {
+        display: block;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+    #autres{
+        padding: 15px;
+        cursor: pointer;
+        border: none;
+    }
+    .liste-deroulante{
+        display: none;
+    }
+    #menu-toggle{
+        display: none;
+    }
+    #menu-toggle:checked ~.liste-deroulante{
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .all {
         margin-left: 0;
         margin-right: 0;
         background-color: var(--background);
         width: 100%;
         padding: 0;
     }
-    body{
+
+    body {
         background: none;
         padding: 0;
         margin: 0;
     }
-    .banner-expo-img{
+
+    .banner-expo-img {
         width: 70%;
-        display:none;
+        display: none;
     }
+
     /***************************************************************************
 Les consoles présentées
 */
-    .consoles-presentes h2{
+    .consoles-presentes h2 {
         font-family: var(--titre);
         margin-left: 2rem;
     }
-    .grid-console{
+
+    .grid-console {
         display: flex;
         justify-content: space-around;
         flex-direction: column;
         margin-top: 2rem;
     }
-    .div-grid-console{
+
+    .div-grid-console {
         display: flex;
         flex-direction: column;
         max-width: 100%;
         margin-bottom: 5rem;
 
     }
-    .div-grid-console h3{
+
+    .div-grid-console h3 {
         font-family: var(--titre);
     }
-    .img-console-expo{
+
+    .img-console-expo {
         object-fit: cover;
         width: 80%;
         height: 80%;
     }
+
     /***********************************************************/
-    .grid-jeux{
+    .grid-jeux {
         display: flex;
         margin-top: 2rem;
-        justify-content:space-between;
+        justify-content: space-between;
         flex-direction: column;
     }
-    .div-grid-jeux{
+
+    .div-grid-jeux {
         display: flex;
         flex-direction: column;
         max-width: 100%;
         margin-bottom: 5rem;
     }
+
     /************************************************/
     /*form crenaux*/
     .div-popup-réservation h2 {
         margin-top: 1rem;
         color: var(--text);
-        font-family:var(--titre);
+        font-family: var(--titre);
         text-align: center;
         font-size: 1rem;
     }
-    .div-popup-réservation{
+
+    .div-popup-réservation {
         font-size: 0.5rem;
     }
 }
-@media screen and (max-width:200px){
-    .darkTable{
+
+@media screen and (max-width: 200px) {
+    .darkTable {
         display: none;
     }
 }
+
 @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
 }
+
 @keyframes ring {
     0% {
         width: 30px;
