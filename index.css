@@ -708,6 +708,7 @@ button:hover {
 section #slogan {
 
     font-family: "Press Start 2P", system-ui;
+    word-wrap: anywhere;
     color: #ffffff;
     font-size: 2.5em;
     color: #ffffff; /* Main neon color */
