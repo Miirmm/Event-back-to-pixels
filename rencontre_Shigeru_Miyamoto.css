@@ -75,7 +75,7 @@ header {
                       /*                                   NAVBAR                    */
 
 .navbar{
-	width: 100%;
+	width: 96%;
 	/* max-width: 1200px; */
 	margin: 0 auto;
 	display: flex;
@@ -244,7 +244,7 @@ ul .submenu {
 }
 
 .burger-menu.open {
-	height: 680px;
+	height: 80px;
 
 }
 
