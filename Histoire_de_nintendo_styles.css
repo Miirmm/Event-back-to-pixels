@@ -1,9 +1,8 @@
 /* Vos styles ici */
-body {
-  font-family: "Press Start 2P", sans-serif;
-  text-decoration: none;
-  background-color: #000000;
-  color: #ffffff;
+
+
+h3{
+  font-family: Roboto, sans-serifs;
 }
 
 p{
@@ -18,25 +17,11 @@ h1{
   text-align: center;
 }
 
-.grandmenu > ul {
-  text-decoration: none;
+.titre_histoire_de_nintendo{
+  color: red;
 }
 
-.grandmenu {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 20px 20px;
-  gap: 25px;
-  position: fixed;
-  width: 95%;
-  height: 5%;
-  background-color: #333;
-}
 
-.grandmenu :hover{
-  color:#f39c12
-}
 
 .logo_back_to_pixels{
   width: 20rem;
@@ -46,33 +31,13 @@ h1{
 li {
   list-style: none;
 }
-.class-sous-nav:hover .sous-nav {
-  display: block;
-  padding-left: 20px;
-  padding-top: 10px;
-}
-
-.sous-nav {
-  display: none;
-}
-
-header {
-  background-color: #333;
-}
 
 a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 /*test*/
 
-nav ul {
-  font-size: 15px;
-  display: inline-block;
-  padding: right 1px;
-  list-style: none;
-  /*margin-right: 15px;*/
-}
 
 img {
   width: 100%;
@@ -82,7 +47,7 @@ img {
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
 }
 
 li a {
@@ -97,12 +62,13 @@ main a {
 
 section h2 {
   text-align: left;
-  color: #ffffff;
+  color: #000000;
   font-size: 30px;
   margin: auto;
   text-align: center;
   padding: 20px;
 }
+
 h2 {
   margin: 100px;
 }
@@ -120,7 +86,7 @@ iframe {
 
 section p {
   font-size: 20px;
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -132,184 +98,547 @@ FOOTER
 
 
 */
+ 
 
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
+ /*                                           augustin           */
+ body {
+	height: 100vh;
+	background-attachment: fixed; 
+	background-color: #3989cb;
+	background-size: cover;
+	background-position: center;
+    margin: 0;
+}
+/*                                      Ici ma NAVBAR                                               */
+
+nav {
+	scale: 2px;
 }
 
-footer p{
-  font-size: 2rem;
-  text-align: center;
+.logo {
+	display: flex;
+	align-items: center;
 }
 
-.footer-content h3 {
-  font-size: 1.8rem;
-  font-weight: 600;
+.logo1 {
+	margin-right: 1em;
+	border-radius: 40% 00% 40% 00%;
 }
 
-.footer-content p {
-  margin: 10px 0;
-  text-align: center;
-  font-size: 1.5rem;
-  line-height: 1.5;
+.navbar a {
+	transition: 0.4s;
+	scale: 1.2;
+	
 }
 
-.socials {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0;
+.rendu-plus-gros:hover {
+	scale: 1.2;
 }
 
-.socials li {
-  margin: 0 1rem;
+img.logo1 {
+	width: 105px;
+	height: 105px;
 }
 
-.socials li a {
-  color: #fff;
-  font-size: 1.5rem;
-  text-decoration: none;
+
+.links li {
+	list-style: none;
+	/* border: 2px solid blue;
+	border-radius: 8%;
+	background-color: transparent rgba(0, 0, 0, 0.8); */
+	transition: 0.3s;
+	scale: 1;
 }
 
-.footer-bottom {
-  margin-top: 20px;
-  font-size: 0.9rem;
+
+header {
+	position: relative;
+	padding: 0 2rem;
+	background-color: rgba(0, 0, 0, 0.238);
 }
 
-.footer-bottom p {
-  margin: 0;
+                      /*                                   NAVBAR                    */
+
+.navbar{
+	width: 100%;
+	/* max-width: 1200px; */
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: 0.3s;
+	scale: 1;																
 }
 
-.footer-bottom a {
-  color: #f80a0a;
-  text-decoration: underline;
+div.navbar a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.2rem;
 }
 
-.footer-bottom a:hover {
-  color: #f39c12;
+
+div.navbar a:hover {
+	color: #63C7B2;
 }
+
+div.burger-menu a:hover {
+	color: #63C7B2;
+}
+	
+.navbar .logo a {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.navbar .links {
+	display: flex;
+	gap: 2rem;
+}
+
+.navbar .burger-menu-button {
+	color: #fff;
+	font-size: 1.5rem;
+	cursor: pointer;
+	display: none;
+}
+
+.buttons {
+	display: flex;
+	gap: 10px;
+}
+
+img .logo1 {
+	text-align: start;
+}
+
+p .titre {
+	margin-right: 0px;
+}
+/*                                           boutton du menu burger                            */
+
+.action-button {
+	background-color: #63C7B2;
+	color: #120d31;
+	border: 1px solid #63C7B2;
+	padding: 0.5rem 1.2rem;
+	border-radius: 5px;
+	outline: none;
+	font-size: 0.9rem;
+	font-weight: bold;
+	cursor: pointer;
+	margin-left: 180px;
+}
+
+div.burger-menu a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.2rem;
+}
+
+.action-button:hover {
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+.pro {
+	background-color: transparent;
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+.pro:hover {
+	background-color: #fff;
+	color: #120d31;
+}
+
+.burger-menu ul .liste-deroulante {
+	text-align: center;
+	transition: 0.3s;
+	scale: 1;
+}
+/*                       Liste déroulante de la catégorie Autres                         */
+
+.links {
+	text-align: center;
+}
+
+.liste-deroulante {
+	display: block;
+	position: relative;
+	padding-right: 50px;
+}
+.links ul .liste-deroulante {
+	text-align: center;
+	transition: 0.3s;
+	scale: 1;
+	padding-right: 40px;
+}
+
+.submenu {
+	display: none	;
+	padding-top: 20px;
+    position: absolute;	
+	color: transparent;
+    left: 0;
+    background-image: url(https://wallpaperboat.com/wp-content/uploads/2020/03/retro-gaming-25.jpg);
+    list-style: none;
+	border: 3px ridge darkblue ;
+	border-radius: 15% 15% 25% 25%;
+	background-position: 40% 50%;
+	transition: all 10 ease;
+    animation: scroll 10s linear alternate infinite;
+    padding-right: 20px;
+}
+
+@keyframes scroll{
+
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 100%;
+    }
+}
+
+.submenu li {
+	padding: 12px 12px 12px 12px;
+}
+
+.liste-deroulante:hover .submenu{
+	display: block;
+}
+
+/*                                             burger menu                                        */
+
+.burger-menu {
+	display: none;
+	height: 0;
+	position: absolute;
+	right: 2rem;
+	top: 60px;
+	width: 200px;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(15px);
+	border-radius: 10px;
+	overflow: hidden;
+	transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+ul .submenu {
+    text-align: center;
+}
+
+.burger-menu.open {
+	height: 680px;
+
+}
+
+.burger-menu li {
+	padding: 0.7rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.divider {
+	height: 1px;
+	background-color: #fff;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1rem;
+}
+
+.burger-menu .action-button {
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.buttons-burger-menu {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.boutton-connecter {
+	font-size: 50px;
+	opacity: 0.8;
+	margin: 10px;
+	text-align: center;	
+	border-style: solid; 
+	border-width: 50px;
+	border-image-source: url(se-connecter-bordure.png);
+	border-image-slice: 300 150 300 150; /* haut | droit | bas | gauche */
+	border-image-width: 50px;
+	color: red ;
+	background-color: #120d31;
+} 
+
+.div-boutton-connecter {
+	text-align: center;
+}
+
+.centrer-connecter {
+	text-align: center;
+}
+
+input[type="checkbox"] {
+	display: none;	
+  }
+  
+  .text {
+	display: none;
+	font-size: 18px;
+	margin: 3em;
+	color: var(--secondary);
+	color: #121212;
+	background-image: url(fond-se-connecter.jpg);
+	height: 200px;
+	padding-top: 20px;
+  }
+
+  .deuxieme-fond {
+	background-color: rgba(rgb(7, 7, 7), 0.8);
+	opacity: 1;
+  }
+  
+  input[type="checkbox"]:checked + label + .text {
+	display: block;
+  }
+
+.lol2 {
+	display: block !important;
+}
+
+
+
+
+
+
+
+
+/*                                      Ici : mon FOOTER                                        */
+footer.example-1 {
+	font-family: Tahoma, sans-serif;
+	background-image: url(https://wallpaperboat.com/wp-content/uploads/2020/03/retro-gaming-25.jpg);
+	padding: 90px 0 0;
+  }
+
+  footer.example-1 .footer-container {
+	max-width: 1200px;
+	margin: 0 auto;
+  }
+  footer.example-1 .footer-container p, footer.example-1 .footer-container a, footer.example-1 .footer-container h4 {
+	color: #FFFFFF;
+  }
+  footer.example-1 .footer-container h4 {
+	margin: 0 0 10px;
+  }
+  footer.example-1 .footer-container p, footer.example-1 .footer-container a {
+	font-size: 16px;
+  }
+  footer.example-1 .footer-container img {
+	max-width: 200px;
+  }
+  footer.example-1 .footer-container .footer-col {
+	margin: 0 15px 60px;
+	padding: 30px;
+	border-radius: 4px;
+	background: #15232D;
+	-webkit-box-shadow: 2px 2px 2px #15232D;
+			box-shadow: 2px 2px 2px #15232D;
+	-webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+			box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+  }
+  @media (min-width: 768px) {
+	footer.example-1 .footer-container .footer-col {
+	  -ms-flex-preferred-size: 32%;
+		  flex-basis: 32%;
+	}
+  }
+  footer.example-1 .footer-container .footer-col ul li {
+	list-style: none;
+  }
+
+  .footer-col {
+	height: 420px;
+  }
+
+  footer.example-1 .bottombar {
+	padding: 20px 15px;
+	background-color: #070e14;
+	text-align: center;
+	font-style: italic;
+	color: #FFFFFF;
+	font-size: .9em;
+  }
+
+  .maps-taille {
+	width: 100% ;
+	height: 250px ;
+  }
+
+  .size-logo {
+	width: 100px;
+	height: 100px;
+  }
+
+.taille-icon {
+	width: 38px;
+	height: 38px;
+}
+
+.alignement-logo-texte {
+	display: flex;
+	align-items: center;
+}
+
+.taille-dernier-footer {
+	width: 30px;
+	height: 30px;
+}
+
+.centrage-footer {
+	text-align: center;
+}
+
+.footer-col, li {
+	margin-top: 2px;
+}
+
+.decalage-footer li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 6px;
+}
+
+.souligné-ref {
+	text-decoration: underline;
+	border-style: solid;
+	border-width: 8px;
+	border-image-source: url(images/incroyable-bordure.png);
+	border-image-slice: 120 120 120 120; /* haut | droit | bas | gauche */
+	border-image-width: 5px;
+}
+
+.bottombar a {
+	font-size: 15px;
+}
+
+
+
+                                                /* Responsive */
+
 
 /*==========================================================================================================================================================================*/
 
 /* Début format Ordinateur/ PC */
 
-@media screen and (min-width: 1024px){
-
-  .grandmenu{
-    text-align: center;
-    padding: 2rem;
-  }
-
-  section h2{
-    color:#f80a0a;
-    text-align: left;
-  }
-
-  div p{
-    text-align: center;
-  }
+.titre_histoire_de_nintendo{
+  color: red;
+}
 
 
 /* Histoire de nintendo*/
-  .image_histoire{
-    width: 30%;
-    height: 30%;
-    margin: 3rem;
-    display: flex;
-    order: 2;
-    align-self: flex-end;
-  }
+.image_histoire{
+  width: 30%;
+  height: 30%;
+  margin: 3rem;
+  display: flex;
+  order: 2;
+  align-self: flex-end;
+  marin
+}
 
-  .section_début_de_nintendo{
-    display: flex;
-    flex-direction: column;
-  }
-
-
- /* Les Consoles*/
-  .images_consoles{
-    width:90%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin: 1rem;
-    padding: 2rem;
-  }
-
-  .description_consoles{
-    text-align: left;
-    width: 90%;
-    font-size: 1.5rem;
-    margin: 1rem;
-  }
-
-  .section_consoles_marquantes{
-    display: flex;
-    justify-content: space-between;
-   }
-
-   .partie_consoles_1{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 3rem;
-  }
-
-  .partie_consoles_2{
-    display: flex;
-    margin-bottom: 3rem;
-  }
+.section_début_de_nintendo{
+  display: flex;
+  flex-direction: column;
+}
 
 
-  main a {
-    display: inline-block;
-    width: 20%;
-  }
+/* Les Consoles*/
+.images_consoles{
+  width:90%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 1rem;
+  padding: 2rem;
+}
 
-  /*Les personnages iconiques*/
+.description_consoles{
+  text-align: left;
+  width: 90%;
+  font-size: 1.5rem;
+  margin: 1rem;
 
-  .section_personnages_iconiques{
-    display: flex;
-    justify-content: space-between;
-   }
+}
 
-   .Personnages-iconiques {
-    margin-top: 20rem;
-  }
+.section_consoles_marquantes{
+  display: flex;
+  justify-content: space-between;
+ }
+
+ .partie_consoles_1{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3rem;
+}
+
+.partie_consoles_2{
+  display: flex;
+  margin-bottom: 3rem;
+}
 
 
-  .nom_personnages_iconiques{
-    font-size: 2rem;
-  }
+main a {
+  display: inline-block;
+  width: 20%;
+}
 
-   .description_personnages_iconiques{
-    text-align: left;
-    width: 90%;
-    font-size: 1.5rem;
-    margin: auto;
-  }
+/*Les personnages iconiques*/
 
-  .images_personnages_iconiques{
-    width:50%;
-    height: 50%;
-    display: flex;
-    align-self: flex-start;
-    justify-content: flex-start;
-    margin: auto;
-    padding: 5rem;
-    
-  }
+.section_personnages_iconiques{
+  display: flex;
+  justify-content: space-between;
+ }
 
-  /* Vidéo documentaire */
-  .section_vidéo_documentaire{
-    margin-top: 40rem;
-    margin-bottom: 30rem;
-  }
+ .Personnages-iconiques {
+  margin-top: 20rem;
+}
 
-  }
+
+.nom_personnages_iconiques{
+  font-size: 2rem;
+}
+
+ .description_personnages_iconiques{
+  text-align: left;
+  width: 90%;
+  font-size: 1.5rem;
+  margin: auto;
+}
+
+.images_personnages_iconiques{
+  width:50%;
+  height: 50%;
+  display: flex;
+  align-self: flex-start;
+  justify-content: flex-start;
+  margin: auto;
+  padding: 5rem;
+  
+}
+
+/* Vidéo documentaire */
+.section_vidéo_documentaire{
+  margin-top: 40rem;
+  margin-bottom: 30rem;
+}
 
 /* Fin format Ordinateur/ PC */  
 
@@ -322,6 +651,10 @@ footer p{
     color: #6d6d6d;
     text-align: center;
    } 
+
+   .titre_histoire_de_nintendo{
+    color: grey;
+  }
 
   div p{
     text-align: center;
@@ -381,7 +714,6 @@ footer p{
   .partie_consoles_2{
     display: flex;
     margin-top: 500px;
-    margin-bottom: 400px;
   }
 
   /* Les Personnages iconiques*/
@@ -430,33 +762,9 @@ footer p{
 
 /*Début format Smartphone/ Téléphone */
 
-  @media screen and (max-width: 767px){
-    section h2{
-      color:blue;
-      text-align: center;
-     }
-
-     section h3{
-      font-size: 10px;
-     }
-
-     .image_histoire{
-      width: 40%;
-      height: 40%;
-      margin: 3rem;
-      display: flex;
-      order: 2;
-      align-self: flex-end;
-    }
-  
-    .section_début_de_nintendo{
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .section_début_de_nintendo h3{
-      font-size: 15px;
-    }
+.titre_histoire_de_nintendo{
+  color: blue;
+}
 
      /*Consoles*/
 
@@ -524,7 +832,7 @@ footer p{
     margin-top: 100px;
     margin-bottom: 200px;
    }
-  }
+  
 
   /*Fin format Smartphone/ Téléphone */
 
@@ -533,3 +841,76 @@ footer p{
   /*PC : min 1024px 
   Tablette : 768px à 1023px 
   mobile : max 767px*/
+
+  @media (max-width: 990px) {
+    header {
+      background: none;
+    }
+  
+    .navbar .links,
+    .navbar .action-button{
+      display: none;
+    }
+  
+    .navbar .burger-menu-button {
+      display: block;
+    }
+  
+    .burger-menu {
+      display: block;
+    }
+    #autres{
+      padding: 15px;
+      cursor: pointer;
+      border: none;
+    }
+    .liste-deroulante{
+      display: none;
+    }
+    #menu-toggle{
+      display: none;
+    }
+    #menu-toggle:checked ~.liste-deroulante{
+      display: block;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    footer.example-1 .footer-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+          justify-content: space-between;
+    }
+  } 
+
+  
+  @media screen and (max-width: 767px){
+    section h2{
+      color:blue;
+      text-align: center;
+     }
+
+     section h3{
+      font-size: 10px;
+     }
+
+     .image_histoire{
+      width: 40%;
+      height: 40%;
+      margin: 3rem;
+      display: flex;
+      order: 2;
+      align-self: flex-end;
+    }
+  
+    .section_début_de_nintendo{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .section_début_de_nintendo h3{
+      font-size: 15px;
+    }
