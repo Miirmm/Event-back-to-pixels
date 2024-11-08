@@ -1,0 +1,475 @@
+body {
+	height: 100vh;
+	background-attachment: fixed; 
+	background-color: #3989cb;
+	background-size: cover;
+	background-position: center;
+    margin: 0;
+}
+/*                                      Ici ma NAVBAR                                               */
+
+nav {
+	scale: 2px;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo1 {
+	margin-right: 1em;
+	border-radius: 40% 00% 40% 00%;
+}
+
+.navbar a {
+	transition: 0.4s;
+	scale: 1.2;
+	
+}
+
+.rendu-plus-gros:hover {
+	scale: 1.2;
+}
+
+img.logo1 {
+	width: 105px;
+	height: 105px;
+}
+
+
+.links li {
+	list-style: none;
+	/* border: 2px solid blue;
+	border-radius: 8%;
+	background-color: transparent rgba(0, 0, 0, 0.8); */
+	transition: 0.3s;
+	scale: 1;
+}
+
+
+header {
+	position: relative;
+	padding: 0 2rem;
+	background-color: rgba(0, 0, 0, 0.238);
+}
+
+                      /*                                   NAVBAR                    */
+
+.navbar{
+	width: 100%;
+	/* max-width: 1200px; */
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: 0.3s;
+	scale: 1;																
+}
+
+div.navbar a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.2rem;
+}
+
+
+div.navbar a:hover {
+	color: #63C7B2;
+}
+
+div.burger-menu a:hover {
+	color: #63C7B2;
+}
+	
+.navbar .logo a {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.navbar .links {
+	display: flex;
+	gap: 2rem;
+}
+
+.navbar .burger-menu-button {
+	color: #fff;
+	font-size: 1.5rem;
+	cursor: pointer;
+	display: none;
+}
+
+.buttons {
+	display: flex;
+	gap: 10px;
+}
+
+img .logo1 {
+	text-align: start;
+}
+
+p .titre {
+	margin-right: 0px;
+}
+/*                                           boutton du menu burger                            */
+
+.action-button {
+	background-color: #63C7B2;
+	color: #120d31;
+	border: 1px solid #63C7B2;
+	padding: 0.5rem 1.2rem;
+	border-radius: 5px;
+	outline: none;
+	font-size: 0.9rem;
+	font-weight: bold;
+	cursor: pointer;
+	margin-left: 180px;
+}
+
+div.burger-menu a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.2rem;
+}
+
+.action-button:hover {
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+.pro {
+	background-color: transparent;
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+.pro:hover {
+	background-color: #fff;
+	color: #120d31;
+}
+
+.burger-menu ul .liste-deroulante {
+	text-align: center;
+	transition: 0.3s;
+	scale: 1;
+}
+/*                       Liste déroulante de la catégorie Autres                         */
+
+.links {
+	text-align: center;
+}
+
+.liste-deroulante {
+	display: block;
+	position: relative;
+	padding-right: 50px;
+}
+.links ul .liste-deroulante {
+	text-align: center;
+	transition: 0.3s;
+	scale: 1;
+	padding-right: 40px;
+}
+
+.submenu {
+	display: none	;
+	padding-top: 20px;
+    position: absolute;	
+	color: transparent;
+    left: 0;
+    background-image: url(https://wallpaperboat.com/wp-content/uploads/2020/03/retro-gaming-25.jpg);
+    list-style: none;
+	border: 3px ridge darkblue ;
+	border-radius: 15% 15% 25% 25%;
+	background-position: 40% 50%;
+	transition: all 10 ease;
+    animation: scroll 10s linear alternate infinite;
+    padding-right: 20px;
+}
+
+@keyframes scroll{
+
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 100%;
+    }
+}
+
+.submenu li {
+	padding: 12px 12px 12px 12px;
+}
+
+.liste-deroulante:hover .submenu{
+	display: block;
+}
+
+/*                                             burger menu                                        */
+
+.burger-menu {
+	display: none;
+	height: 0;
+	position: absolute;
+	right: 2rem;
+	top: 60px;
+	width: 200px;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(15px);
+	border-radius: 10px;
+	overflow: hidden;
+	transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+ul .submenu {
+    text-align: center;
+}
+
+.burger-menu.open {
+	height: 680px;
+
+}
+
+.burger-menu li {
+	padding: 0.7rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.divider {
+	height: 1px;
+	background-color: #fff;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1rem;
+}
+
+.burger-menu .action-button {
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.buttons-burger-menu {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.boutton-connecter {
+	font-size: 50px;
+	opacity: 0.8;
+	margin: 10px;
+	text-align: center;	
+	border-style: solid; 
+	border-width: 50px;
+	border-image-source: url(se-connecter-bordure.png);
+	border-image-slice: 300 150 300 150; /* haut | droit | bas | gauche */
+	border-image-width: 50px;
+	color: red ;
+	background-color: #120d31;
+} 
+
+.div-boutton-connecter {
+	text-align: center;
+}
+
+.centrer-connecter {
+	text-align: center;
+}
+
+input[type="checkbox"] {
+	display: none;	
+  }
+  
+  .text {
+	display: none;
+	font-size: 18px;
+	margin: 3em;
+	color: var(--secondary);
+	color: #121212;
+	background-image: url(fond-se-connecter.jpg);
+	height: 200px;
+	padding-top: 20px;
+  }
+
+  .deuxieme-fond {
+	background-color: rgba(rgb(7, 7, 7), 0.8);
+	opacity: 1;
+  }
+  
+  input[type="checkbox"]:checked + label + .text {
+	display: block;
+  }
+
+.lol2 {
+	display: block !important;
+}
+
+
+
+
+
+
+
+
+/*                                      Ici : mon FOOTER                                        */
+footer.example-1 {
+	font-family: Tahoma, sans-serif;
+	background-image: url(https://wallpaperboat.com/wp-content/uploads/2020/03/retro-gaming-25.jpg);
+	padding: 90px 0 0;
+  }
+
+  footer.example-1 .footer-container {
+	max-width: 1200px;
+	margin: 0 auto;
+  }
+  footer.example-1 .footer-container p, footer.example-1 .footer-container a, footer.example-1 .footer-container h4 {
+	color: #FFFFFF;
+  }
+  footer.example-1 .footer-container h4 {
+	margin: 0 0 10px;
+  }
+  footer.example-1 .footer-container p, footer.example-1 .footer-container a {
+	font-size: 16px;
+  }
+  footer.example-1 .footer-container img {
+	max-width: 200px;
+  }
+  footer.example-1 .footer-container .footer-col {
+	margin: 0 15px 60px;
+	padding: 30px;
+	border-radius: 4px;
+	background: #15232D;
+	-webkit-box-shadow: 2px 2px 2px #15232D;
+			box-shadow: 2px 2px 2px #15232D;
+	-webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+			box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+  }
+  @media (min-width: 768px) {
+	footer.example-1 .footer-container .footer-col {
+	  -ms-flex-preferred-size: 32%;
+		  flex-basis: 32%;
+	}
+  }
+  footer.example-1 .footer-container .footer-col ul li {
+	list-style: none;
+  }
+
+  .footer-col {
+	height: 420px;
+  }
+
+  footer.example-1 .bottombar {
+	padding: 20px 15px;
+	background-color: #070e14;
+	text-align: center;
+	font-style: italic;
+	color: #FFFFFF;
+	font-size: .9em;
+  }
+
+  .maps-taille {
+	width: 20px ;
+	height: 250px ;
+  }
+
+  .size-logo {
+	width: 100px;
+	height: 100px;
+  }
+
+.taille-icon {
+	width: 38px;
+	height: 38px;
+}
+
+.alignement-logo-texte {
+	display: flex;
+	align-items: center;
+}
+
+.taille-dernier-footer {
+	width: 30px;
+	height: 30px;
+}
+
+.centrage-footer {
+	text-align: center;
+}
+
+.footer-col, li {
+	margin-top: 2px;
+}
+
+.decalage-footer li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 6px;
+}
+
+.souligné-ref {
+	text-decoration: underline;
+	border-style: solid;
+	border-width: 8px;
+	border-image-source: url(images/incroyable-bordure.png);
+	border-image-slice: 120 120 120 120; /* haut | droit | bas | gauche */
+	border-image-width: 5px;
+}
+
+.bottombar a {
+	font-size: 15px;
+}
+
+
+
+                                                /* Responsive */
+
+@media (max-width: 990px) {
+	header {
+		background: none;
+	}
+
+	.navbar .links,
+	.navbar .action-button{
+		display: none;
+	}
+
+	.navbar .burger-menu-button {
+		display: block;
+	}
+
+	.burger-menu {
+		display: block;
+	}
+	#autres{
+		padding: 15px;
+		cursor: pointer;
+		border: none;
+	}
+	.liste-deroulante{
+		display: none;
+	}
+	#menu-toggle{
+		display: none;
+	}
+	#menu-toggle:checked ~.liste-deroulante{
+		display: block;
+	}
+}
+
+@media (min-width: 768px) {
+	footer.example-1 .footer-container {
+	  display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: flex;
+	  -webkit-box-pack: justify;
+		  -ms-flex-pack: justify;
+			  justify-content: space-between;
+	}
+}

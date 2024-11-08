@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Rencontre Exclusive avec Shigeru Miyamoto | Organisé par Back to Pixels">
+    <meta property="og:title" content="Rencontre avec Shigeru Miymoto" />
+    <meta property="og:description"
+        content="Venez vivre une expérience inoubliable au festival Back to Pixels ! Rencontrez le légendaire Shigeru Miyamoto, créateur de Mario et Zelda, et plongez dans l'univers fascinant du jeu vidéo. Ateliers, discussions et moments exclusifs vous attendent !" />
+    <meta property="og:url" content="https://votresite.com/Rencontre-shigeru-miyamoto" />
+    <link rel="shortcut icon" href="./images/Logo_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./rencontre_Shigeru_Miyamoto.css">
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab:wght@100..900&display=swap");
+    </style>
+    <title>Rencontre avec Shigeru Miyamoto</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="logo">
+            <img class="logo1" src="images/logo1.png" alt="" />
+            <p class="titre">Le Back-to-Pixel Festival</p>
+        </a>
+        <ul class="links">
+            <li class="rendu-plus-gros"><a href="tournois.html">Tournois</a></li>
+            <li class="rendu-plus-gros">
+                <a href="expo.html">Exposition de Consoles Rétro</a>
+            </li>
+            <li class="rendu-plus-gros">
+                <a href="Histoire_de_nintendo_index.html">Histoire de Nintendo</a>
+            </li>
+            <li class="rendu-plus-gros">
+                <a href="rencontre_Shigeru_Miyamoto.html">Rencontre avec Shigeru Miyamoto</a>
+            </li>
+
+            <ul class="liste-deroulante">
+                <li>
+                    <a href="#">Autres ⬇</a>
+                </li>
+                <ul class="submenu">
+                    <li>
+                        <a href="ateliers_et_activités.html">Ateliers et Activités</a>
+                    </li>
+                    <li>
+                        <a href="programme_du_festival.html">Programme du Festival</a>
+                    </li>
+                    <li>
+                        <a href="partenaires_et_sponsors.html">Partenaires et Sponsors</a>
+                    </li>
+                    <li>
+                        <a href="boutique_de_produits_dérivés">Boutique de produits Dérivés</a>
+                    </li>
+                    <li>
+                        <a href="accréditation_presse_et_média.html">Presse et Média</a>
+                    </li>
+                </ul>
+            </ul>
+        </ul>
+        <div class="burger-menu-button">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="burger-menu">
+        <ul class="links">
+            <li><a href="tournois.html">Tournois</a></li>
+            <li><a href="expo.html">Exposition de Consoles Rétro</a></li>
+            <li>
+                <a href="Histoire_de_nintendo_index.html">Histoire de Nintendo</a>
+            </li>
+            <li>
+                <a href="rencontre_Shigeru_Miyamoto.html">Rencontre avec Shigeru Miyamoto</a>
+            </li>
+            <input type="checkbox" class="menuToggle" id="menu-toggle" />
+            <li id="lol">Autres</li>
+
+            <ul class="liste-deroulante" id="toDisplay">
+                <!-- <label for="#">Autres</label> -->
+
+                <li>
+                    <a href="ateliers_et_activités.html">Ateliers et Activités</a>
+                </li>
+                <li>
+                    <a href="programme_du_festival.html">Programme du Festival</a>
+                </li>
+                <li>
+                    <a href="partenaires_et_sponsors.html">Partenaires et Sponsors</a>
+                </li>
+                <li>
+                    <a href="boutique_de_produits_dérivés">Boutique de produits Dérivés</a>
+                </li>
+                <li>
+                    <a href="accréditation_presse_et_média.html">Presse et Média</a>
+                </li>
+            </ul>
+            <div class="divider"></div>
+        </ul>
+    </div>
+    </header>
+
+    <script>
+        const burgerMenuButton = document.querySelector(".burger-menu-button");
+        const lol = document.querySelector("#lol");
+        const lol2 = document.querySelector("#toDisplay");
+
+        const burgerMenuButtonIcon = document.querySelector(
+            ".burger-menu-button i"
+        );
+        const burgerMenu = document.querySelector(".burger-menu");
+
+        burgerMenuButton.onclick = function () {
+            burgerMenu.classList.toggle("open");
+            const isOpen = burgerMenu.classList.contains("open");
+            burgerMenuButtonIcon.classList = isOpen
+                ? "fa-solid fa-xmark"
+                : "fa-solid fa-bars";
+        };
+        lol.onclick = function () {
+            console.log(lol2.style.display);
+            if (lol2.style.display == "block") {
+                lol2.setAttribute("style", "display:none !important;");
+            } else {
+                lol2.setAttribute("style", "display:block !important;");
+            }
+        };
+        const autreBtn = document.querySelector(".menuToggle");
+        autreBtn.onclick = function () {
+            // autreBtn.classList.toggle("visible");
+            document.querySelector(".open").style.height = "800px";
+        };
+    </script>
+
+    <section class="presentation">
+        <h1>Qui est Shigeru Miyamoto ?</h1>
+        <img src="./images/miyamoto.jpg" alt="" class="img_miyamoto">
+        <p>Shigeru Miyamoto est l'un des créateurs de jeux vidéo les plus influents au monde. En tant que légendaire
+            concepteur de jeux chez Nintendo, il est à l'origine des franchises iconiques telles que <strong>*Super
+                Mario*</strong>,
+            <strong>"The Legend of Zelda"</strong>, et <strong>Donkey Kong</strong>. Son travail a façonné l'industrie
+            du jeu vidéo et a inspiré des
+            générations de joueurs et de créateurs.
+        </p>
+
+        <a href="https://fr.wikipedia.org/wiki/Shigeru_Miyamoto" class="cta-button" target="_blank">En savoir plus</a>
+    </section>
+
+    <section class="key-moments">
+        <h2>Moments clés de la carrière de Shigeru Miyamoto</h2>
+        <div class="moments-container">
+            <!-- Premier moment clé -->
+            <div class="moment">
+                <h3>1977 : Donkey Kong</h3>
+                <img src="./images/jaquette-donkey-kong-gameboy-g-boy-cover-avant-g.jpg" alt="">
+                <p>Shigeru Miyamoto crée *Donkey Kong*, un des premiers jeux à succès de Nintendo, marquant le début de
+                    sa carrière de créateur de jeux. Ce jeu introduit des personnages iconiques comme Mario et Donkey
+                    Kong, et devient un succès mondial.</p>
+
+                <!-- Deuxième moment clé -->
+
+                <h3>1981 : Super Mario Bros</h3>
+                <img src="./images/86c02e32ef3ea0deaa4bca99502e95ed--super-mario-brothers-super-mario-bros.jpg" alt="">
+                <p>Le lancement de *Super Mario Bros* en 1981 révolutionne l'industrie du jeu vidéo. Miyamoto crée un
+                    jeu de plateforme à défilement horizontal qui devient l'un des jeux vidéo les plus vendus de tous
+                    les temps.</p>
+            </div>
+
+            <!-- Troisième moment clé -->
+            <div class="moment">
+                <h3>1986 : The Legend of Zelda</h3>
+                <img src="./images/the-legend-of-zelda-1986.jpg" alt="">
+                <p>En 1986, Miyamoto lance *The Legend of Zelda*, un jeu d'aventure révolutionnaire avec des éléments de
+                    puzzle et d'exploration. Ce jeu devient un pilier de la franchise Nintendo, avec des suites et
+                    adaptations à succès.</p>
+
+                <!-- Quatrième moment clé -->
+
+                <h3>1990 : Super Mario Kart</h3>
+                <img src="./images/super-mario-kart-1990.jpg" alt="">
+                <p>*Super Mario Kart* est lancé en 1990, introduisant le genre des jeux de course avec des personnages
+                    emblématiques de Nintendo. Ce jeu devient un succès instantané et initie une série toujours
+                    populaire.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="event-description">
+        <h2>Rencontre avec Shigeru Miyamoto : Une Légende du Jeu Vidéo</h2>
+        <div class="event-details">
+            <div class="event-item">
+                <h3>Quand ?</h3>
+                <p>Date de l'événement : <span id="event-date">23 novembre 2024</span></p>
+            </div>
+
+            <div class="event-item">
+                <h3>Où ?</h3>
+                <p>Lieu de l'événement : <span id="event-location">Rouen</span></p>
+            </div>
+
+            <div class="event-item">
+                <h3>Description</h3>
+                <p>Rejoignez-nous pour une expérience inoubliable avec l'un des créateurs les plus influents de
+                    l'histoire du jeu vidéo, <strong>Shigeru Miyamoto</strong>, à l'occasion d'un événement unique
+                    organisé par <strong>Back to Pixels</strong>. Ce sera l'occasion de découvrir les coulisses de
+                    l'univers de Nintendo et de plonger dans l'univers créatif de la légende à l'origine de franchises
+                    Participez à des discussions fascinantes, posez vos questions à Miyamoto.</p>
+            </div>
+
+            <div class="event-item-inscription">
+                <a href="./Se-connecter.html" class="cta-button">Inscription</a>
+            </div>
+        </div>
+
+        <!-- Formulaire Q&A -->
+        <div class="qa-form">
+            <h3>Posez votre question à Shigeru Miyamoto</h3>
+            <form action="/submit-question" method="POST">
+                <label for="name">Votre nom :</label>
+                <input type="text" id="name" name="name" required placeholder="Entrez votre nom">
+
+                <label for="email">Votre email :</label>
+                <input type="email" id="email" name="email" required placeholder="Entrez votre email">
+
+                <label for="question">Votre question :</label>
+                <textarea id="question" name="question" rows="4" required
+                    placeholder="Posez votre question ici"></textarea>
+
+                <button type="submit" class="cta-button">Envoyer la question</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="galerie-photos-et-videos">
+        <!-- Photo 1 : Accueil de l'événement -->
+        <div class="gallery-item">
+            <img src="./images/retrogamesshow.png" alt="Accueil de l'événement">
+            <h3>Accueil de l'événement</h3>
+            <p>Une vue de l'entrée de l'événement, décorée aux couleurs de Nintendo.</p>
+        </div>
+
+        <!-- Vidéo 1 : Conférence d'ouverture -->
+        <div class="gallery-item">
+            <video controls>
+                <source src="https://example.com/video1.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge les vidéos HTML5.
+            </video>
+            <h3>Conférence d'ouverture</h3>
+            <p>Shigeru Miyamoto parle de son parcours et de ses projets futurs.</p>
+        </div>
+
+        <!-- Photo 2 : Séance de questions-réponses -->
+        <div class="gallery-item">
+            <img src="./images/Q&A.jpg" alt="Séance de questions-réponses">
+            <h3>Séance de Questions-Réponses</h3>
+            <p>Le public pose des questions à Miyamoto sur l'avenir des jeux Nintendo.</p>
+        </div>
+
+        <!-- Vidéo 2 : Miyamoto répond à une question -->
+        <div class="gallery-item">
+            <video controls>
+                <source src="https://example.com/video2.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge les vidéos HTML5.
+            </video>
+            <h3>Miyamoto répond à une question</h3>
+            <p>Un extrait de la session où Miyamoto discute de ses inspirations pour Mario.</p>
+        </div>
+
+        <!-- Photo 3 : Dédiacace et échanges avec les fans -->
+        <div class="gallery-item">
+            <img src="./images/miyamoto.jpg" alt="Dédicace avec les fans">
+            <h3>Dédicace et échanges avec les fans</h3>
+            <p>Shigeru Miyamoto signe des autographes et discute avec les fans présents.</p>
+        </div>
+
+        <!-- Vidéo 3 : Clôture de l'événement -->
+        <div class="gallery-item">
+            <video controls>
+                <source src="https://example.com/video3.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge les vidéos HTML5.
+            </video>
+            <h3>Clôture de l'événement</h3>
+            <p>Moment émouvant où Miyamoto remercie tous les participants.</p>
+        </div>
+    </section>
+
+
+    <!-- Section Billetterie -->
+    <section class="billetterie">
+        <form action="#" method="post">
+            <h2>Formulaire de Réservation</h2>
+
+            <!-- Informations Personnelles -->
+            <div class="form-group">
+                <label for="full-name">Nom Complet :</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Numéro de Téléphone :</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <!-- Sélection du type de billet -->
+            <div class="form-group">
+                <label for="ticket-type">Type de Billet :</label>
+                <div class="options">
+                    <label>
+                        <input type="radio" id="vip" name="ticket-type" value="VIP" required>
+                        VIP - 150€
+                    </label>
+                    <label>
+                        <input type="radio" id="standard" name="ticket-type" value="Standard" required>
+                        Standard - 50€
+                    </label>
+                </div>
+            </div>
+
+            <!-- Quantité de billets -->
+            <div class="form-group">
+                <label for="quantity">Quantité de Billets :</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
+            </div>
+
+            <!-- Informations supplémentaires -->
+            <div class="form-group">
+                <label for="message">Message (optionnel) :</label>
+                <textarea id="message" name="message" rows="4"
+                    placeholder="Si vous avez des demandes spéciales, veuillez les indiquer ici."></textarea>
+            </div>
+
+            <!-- Soumettre le formulaire -->
+            <form action="#" method="post">
+                <!-- Champs du formulaire -->
+                <button type="submit">Réserver mes Billets</button>
+            </form>
+        </form>
+    </section>
+
+    <footer class="example-1">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="centrage-footer">
+                    <h4>Lieu :</h4>
+                    <br />
+                    <p>Voici l'adresse pour nous rejoindres :</p>
+                    <br />
+                    <iframe class="maps-taille"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2594.293122449874!2d1.1008915125892296!3d49.441176671297946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e0df1548cd768b%3A0x70b4b34959b1ec9f!2sNeed%20for%20School!5e0!3m2!1sfr!2sfr!4v1730827755843!5m2!1sfr!2sfr"
+                        style="border: 0" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <!--                              2eme categorie du footer (  du milieu  )                     -->
+            <div class="centrage-footer">
+                <div class="footer-col">
+                    <h4>Contact options :</h4>
+                    <br />
+
+                    <p class="alignement-logo-texte">
+                        <img class="taille-icon" src="images/logo-gmail.png" />
+                        &nbsp; Notre : &nbsp;
+                        <a class="souligné-ref" href="super.email@example.com">Email</a>
+                    </p>
+                    <br />
+
+                    <p class="alignement-logo-texte">
+                        <img class="taille-icon" src="images/logo-whatsapp.png" />
+                        &nbsp; Voici : &nbsp;
+                        <a class="souligné-ref" href="tel:+31 0605050606"> Téléphone</a>
+                    </p>
+                    <br />
+
+                    <p class="alignement-logo-texte">
+                        <svg class="taille-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="#74C0FC"
+                                d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z" />
+                        </svg>
+                        &nbsp; Notre : &nbsp;
+                        <a class="souligné-ref" href="https://fr-fr.facebook.com/">
+                            Facebook</a>
+                    </p>
+                    <br />
+
+                    <p class="alignement-logo-texte">
+                        <img class="taille-icon" src="images/logo-instagram.png" />
+                        &nbsp; Voici : &nbsp;
+                        <a class="souligné-ref" href="https://www.instagram.com/">Instagram</a>
+                    </p>
+                </div>
+            </div>
+            <!--                       derniere categorie du footer (  sitemap  )            -->
+            <div class="centrage-footer">
+                <div class="footer-col">
+                    <h4>Sitemap :</h4>
+                    <br />
+                    <div class="decalage-footer">
+                        <ul>
+                            <li>
+                                <a href="tournois.html">Tournois</a>
+                                <img class="taille-dernier-footer" src="images/logo-tournoi.png" />
+                            </li>
+
+                            <li>
+                                <img class="taille-dernier-footer" src="images/logo-exposition.png" />
+                                <a href="expo.html">Exposition de Consoles Rétro</a>
+                            </li>
+
+                            <li>
+                                <a href="Histoire_de_nintendo_index.html">Histoire de Nintendo</a>
+                                <img class="taille-dernier-footer" src="images/logo-histoire.png" />
+                            </li>
+
+                            <li>
+                                <img class="taille-dernier-footer" src="images/logo-rencontre.png" />
+                                <a href="rencontre_Shigeru_Miyamoto.html">Rencontre avec Shigeru Miyamoto</a>
+                            </li>
+
+                            <li>
+                                <a href="ateliers_et_activités.html">Ateliers et Activités</a>
+                                <img class="taille-dernier-footer" src="images/logo-atelier.png" />
+                            </li>
+
+                            <li>
+                                <img class="taille-dernier-footer" src="images/logo-programme.png" />
+                                <a href="programme_du_festival.html">Programme du Festival</a>
+                            </li>
+
+                            <li>
+                                <a href="partenaires_et_sponsors.html">Partenaires et Sponsors</a>
+                                <img class="taille-dernier-footer" src="images/logo-investisseur.png" />
+                            </li>
+
+                            <li>
+                                <img class="taille-dernier-footer" src="images/logo-boutique.png" />
+                                <a href="boutique_de_produits_dérivés">Boutique de Produits Dérivés</a>
+                            </li>
+
+                            <li>
+                                <a href="accréditation_presse_et_média.html">Accréditations Presse et Médias</a>
+                                <img class="taille-dernier-footer" src="images/logo-media.png" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottombar">
+            Copyright © 2024 - Back to Pixels /
+            <a href="mentions-legales.html">Mentions légales</a>
+        </div>
+    </footer>
+</body>
+
+</html>

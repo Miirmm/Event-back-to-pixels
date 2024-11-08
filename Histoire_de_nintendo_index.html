@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link rel="stylesheet" href="Histoire_de_nintendo_styles.css" />
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- font family: Press Start 2P -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font family: Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="image/favicon.png" type="image/x-icon" />
+    <title>Back to Pixel</title>
+    <meta
+      name="description"
+      content="Bienvenue dans Back to Pixels, un lieu rassemblant les consoles et jeux nintendo de votre enfance dans l'age du rétro-gaming. Soyez au courant de l'histoire de vos personnages préférés tel que Mario, Link et Kirby et de leurs jeux les plus populaires !"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <a class="logo">
+          <img class="logo1" src="images/logo1.png" alt="" />
+          <p class="titre">Le Back-to-Pixel Festival</p>
+        </a>
+        <ul class="links">
+          <li class="rendu-plus-gros"><a href="tournoi.html">Tournois</a></li>
+          <li class="rendu-plus-gros">
+            <a href="expo.html">Exposition de Consoles Rétro</a>
+          </li>
+          <li class="rendu-plus-gros">
+            <a href="Histoire_de_nintendo_index.html">Histoire de Nintendo</a>
+          </li>
+          <li class="rendu-plus-gros">
+            <a href="rencontre_Shigeru_Miyamoto.html"
+              >Rencontre avec Shigeru Miyamoto</a
+            >
+          </li>
+
+          <ul class="liste-deroulante">
+            <li>
+              <a href="#">Autres ⬇</a>
+            </li>
+            <ul class="submenu">
+              <li>
+                <a href="ateliers_et_activités.html">Ateliers et Activités</a>
+              </li>
+              <li>
+                <a href="programme_du_festival.html">Programme du Festival</a>
+              </li>
+              <li>
+                <a href="partenaires_et_sponsors.html"
+                  >Partenaires et Sponsors</a
+                >
+              </li>
+              <li>
+                <a href="boutique_de_produits_dérivés"
+                  >Boutique de produits Dérivés</a
+                >
+              </li>
+              <li>
+                <a href="accréditation_presse_et_média.html">Presse et Média</a>
+              </li>
+            </ul>
+          </ul>
+        </ul>
+        <div class="burger-menu-button">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="burger-menu">
+        <ul class="links">
+          <li><a href="tournoi.html">Tournois</a></li>
+          <li><a href="expo.html">Exposition de Consoles Rétro</a></li>
+          <li>
+            <a href="Histoire_de_nintendo_index.html">Histoire de Nintendo</a>
+          </li>
+          <li>
+            <a href="rencontre_Shigeru_Miyamoto.html"
+              >Rencontre avec Shigeru Miyamoto</a
+            >
+          </li>
+          <input type="checkbox" class="menuToggle" id="menu-toggle" />
+          <li id="lol">Autres</li>
+
+          <ul class="liste-deroulante" id="toDisplay">
+            <!-- <label for="#">Autres</label> -->
+
+            <li>
+              <a href="ateliers_et_activités.html">Ateliers et Activités</a>
+            </li>
+            <li>
+              <a href="programme_du_festival.html">Programme du Festival</a>
+            </li>
+            <li>
+              <a href="partenaires_et_sponsors.html">Partenaires et Sponsors</a>
+            </li>
+            <li>
+              <a href="boutique_de_produits_dérivés"
+                >Boutique de produits Dérivés</a
+              >
+            </li>
+            <li>
+              <a href="accréditation_presse_et_média.html">Presse et Média</a>
+            </li>
+          </ul>
+          <div class="divider"></div>
+        </ul>
+      </div>
+    </header>
+
+    <script>
+      const burgerMenuButton = document.querySelector(".burger-menu-button");
+      const lol = document.querySelector("#lol");
+      const lol2 = document.querySelector("#toDisplay");
+
+      const burgerMenuButtonIcon = document.querySelector(
+        ".burger-menu-button i"
+      );
+      const burgerMenu = document.querySelector(".burger-menu");
+
+      burgerMenuButton.onclick = function () {
+        burgerMenu.classList.toggle("open");
+        const isOpen = burgerMenu.classList.contains("open");
+        burgerMenuButtonIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+      lol.onclick = function () {
+        console.log(lol2.style.display);
+        if (lol2.style.display == "block") {
+          lol2.setAttribute("style", "display:none !important;");
+        } else {
+          lol2.setAttribute("style", "display:block !important;");
+        }
+      };
+      const autreBtn = document.querySelector(".menuToggle");
+      autreBtn.onclick = function () {
+        // autreBtn.classList.toggle("visible");
+        document.querySelector(".open").style.height = "800px";
+      };
+    </script>
+    <main>
+      <!--Début section présentation-->
+      <section>
+        <img
+          id="boutique"
+          src="Images_histoire_de_nintendo/les personnages nintendo.jpg"
+        />
+        <h1 class="titre_histoire_de_nintendo">
+          <!--crédit image : Nintendo, https://www.nintendo.com/fr-be/Jeux/Jeux-Nintendo-Switch/Super-Smash-Bros-Ultimate-1395713.html -->
+          <br /><br />
+          L'histoitre de Nintendo :
+        </h1>
+        <br />
+      </section>
+      <!--Fin section présentation-->
+
+      <!--Début section debut de nintendo-->
+      <section class="section_début_de_nintendo">
+        <h2>Les débuts de Nintendo :</h2>
+
+        <h3>
+          Nintendo a été fondée en 1889 à Kyoto, au Japon, par Fusajiro
+          Yamauchi. À l'origine, l'entreprise fabriquait des cartes à jouer
+          japonaises traditionnelles, appelées hanafuda. Après plusieurs
+          décennies et diverses tentatives dans des secteurs variés (notamment
+          les jouets et les hôtels), Nintendo s’est réinventée dans les années
+          1970 pour se concentrer sur les jeux électroniques et les consoles.
+          Cette transition a été marquée par des succès comme la console Color
+          TV-Game et les premières bornes d'arcade. Nintendo a alors posé les
+          bases de son futur empire dans l'industrie du jeu vidéo, un domaine
+          dans lequel elle deviendra un leader mondial.
+        </h3>
+
+        <img
+          src="Images_histoire_de_nintendo/logo_nintendo.png"
+          class="image_histoire"
+          alt="image_du_logo_de_nintendo"
+          target="_blank"
+        />
+        <!--Crédit logo nintendo : https://commons.wikimedia.org/wiki/File:Nintendo.svg (autres logos)-->
+      </section>
+      <!--Fin section debut de nintendo-->
+
+      <!--Section Consoles Marquantes -->
+      <section>
+        <h2 #id="Consoles">Les consoles marquantes:</h2>
+        <div class="section_consoles_marquantes">
+          <div class="partie_consoles_1">
+            <div class="partie_SNES">
+              <!-- le nom de la page Console-->
+              <p class="Nom_consoles">SNES</p>
+              <img
+                src="Images_histoire_de_nintendo/SNES.jpg"
+                class="images_consoles"
+                alt="image_de_la_SNES"
+                target="_blank"
+              />
+              <p class="description_consoles">
+                La Super Nintendo Entertainment System (SNES), lancée par
+                Nintendo en 1990 au Japon (et en 1991 en Amérique du Nord), est
+                une console de salon 16 bits qui a révolutionné l'industrie du
+                jeu vidéo. Elle est connue pour ses graphismes avancés, ses
+                effets sonores immersifs et sa manette ergonomique. La SNES
+                propose une incroyable bibliothèque de jeux, dont des classiques
+                comme Super Mario World, The Legend of Zelda: A Link to the
+                Past, et Super Metroid. Elle a renforcé la popularité de
+                Nintendo et reste une console emblématique pour les fans de
+                rétro-gaming.
+              </p>
+            </div>
+
+            <div class="partie_NES">
+              <!-- le nom de la page Console-->
+              <p class="Nom_consoles">NES</p>
+              <img
+                src="Images_histoire_de_nintendo/NES.jpg"
+                class="images_consoles"
+                alt="image_de_la_NES"
+                target="_blank"
+              />
+              <p class="description_consoles">
+                La Nintendo Entertainment System (NES), lancée en 1983 au Japon
+                (sous le nom de Famicom) et en 1985 en Amérique du Nord, est la
+                console de salon qui a relancé l'industrie du jeu vidéo après le
+                crash de 1983. Avec ses graphismes 8 bits et une manette simple
+                mais efficace, la NES a popularisé des franchises légendaires
+                comme Super Mario Bros., The Legend of Zelda, et Metroid. Grâce
+                à sa large bibliothèque de jeux et son succès mondial, elle a
+                fait de Nintendo un acteur majeur et reste une icône du
+                rétro-gaming.
+              </p>
+            </div>
+          </div>
+
+          <div class="partie_consoles_2">
+            <div class="partie_N64">
+              <!-- le nom de la page Console-->
+              <p class="Nom_consoles">N64</p>
+              <img
+                src="Images_histoire_de_nintendo/N64.jpg"
+                class="images_consoles"
+                alt="image_de_la_N64"
+                target="_blank"
+              />
+              <p class="description_consoles">
+                La Nintendo 64 (N64), sortie en 1996, est la première console de
+                Nintendo à utiliser des graphismes en 3D, ce qui a marqué un
+                tournant majeur dans l'industrie du jeu vidéo. Elle est équipée
+                d’une manette innovante avec un stick analogique, permettant des
+                mouvements précis dans des environnements tridimensionnels. La
+                N64 est célèbre pour des jeux emblématiques comme Super Mario
+                64, The Legend of Zelda: Ocarina of Time, et GoldenEye 007.
+                Malgré la concurrence du format CD de Sony, elle est devenue une
+                console culte pour ses avancées techniques et ses jeux
+                révolutionnaires.
+              </p>
+            </div>
+
+            <div class="partie_Gameboy">
+              <!-- le nom de la page Console-->
+              <p class="Nom_consoles">Gameboy</p>
+              <img
+                class="images_consoles"
+                src="Images_histoire_de_nintendo/game-boy.jpg"
+                alt="image_de_la_Gameboy"
+                target="_blank"
+              />
+              <p class="description_consoles">
+                La Game Boy est une console portable de jeux vidéo développée
+                par Nintendo et sortie en 1989. Elle est célèbre pour son écran
+                monochrome, sa durabilité et sa bibliothèque de jeux iconiques
+                comme Tetris et Pokémon. Elle fonctionne avec des cartouches de
+                jeu interchangeables et utilise des piles, ce qui la rend
+                facilement transportable. Grâce à son succès mondial et à sa
+                simplicité, elle est devenue un symbole de l’histoire des jeux
+                vidéo et a marqué toute une génération de joueurs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br />
+
+      <!--Section Personnages iconiques -->
+
+      <section>
+        <div class="Personnages-iconiques">
+          <h2 id="actualités">Les Personnages iconiques :</h2>
+          <div class="section_personnages_iconiques">
+            <div>
+              <!-- Mario-->
+              <p class="nom_personnages_iconiques">Mario</p>
+              <img
+                src="Images_histoire_de_nintendo/Mario.png"
+                class="images_personnages_iconiques"
+                alt="image_de_Mario"
+                target="_blank"
+              />
+              <!--Crédit mario : https://www.lemondedemario.fr/dossiers/personnages/mario-->
+              <p class="description_personnages_iconiques">
+                Mario est le personnage emblématique de Nintendo et l’un des
+                personnages de jeux vidéo les plus célèbres au monde. Créé par
+                Shigeru Miyamoto, Mario est apparu pour la première fois dans
+                Donkey Kong en 1981 sous le nom de "Jumpman" avant de devenir le
+                héros principal de Super Mario Bros. en 1985. Ce plombier
+                moustachu, avec sa casquette rouge et sa salopette bleue, est
+                connu pour ses aventures dans le Royaume Champignon, où il sauve
+                régulièrement la princesse Peach du maléfique Bowser. La série
+                Mario a révolutionné le genre des jeux de plateforme et a fait
+                de Mario un symbole mondial du jeu vidéo.
+              </p>
+            </div>
+
+            <!--Link -->
+            <div>
+              <p class="nom_personnages_iconiques">Link</p>
+              <img
+                src="Images_histoire_de_nintendo/Link.jpg"
+                class="images_personnages_iconiques"
+                alt="Image_de_Link"
+                target="_blank"
+              />
+              <!--Crédit link : https://leclaireur.fnac.com/article/cp49630-link-qui-est-le-heros-des-jeux-zelda-de-nintendo/-->
+              <p class="description_personnages_iconiques">
+                Link est le héros de la série The Legend of Zelda de Nintendo,
+                créé par Shigeru Miyamoto en 1986. Ce jeune guerrier vêtu de
+                vert et souvent armé de l'épée légendaire Excalibur et d'un
+                bouclier, traverse le royaume d'Hyrule pour affronter les forces
+                du mal, notamment le puissant Ganon, et sauver la princesse
+                Zelda. Reconnu pour son courage, Link est un symbole de bravoure
+                et d'aventure dans le monde du jeu vidéo. Sa quête, mélangeant
+                exploration, énigmes, et combats, a fait de Zelda une franchise
+                culte et un pilier du jeu d'action-aventure.
+              </p>
+            </div>
+
+            <!-- Kirby -->
+            <div>
+              <p class="nom_personnages_iconiques">Kirby</p>
+              <img
+                src="Images_histoire_de_nintendo/Kirby_Nintendo.png"
+                class="images_personnages_iconiques"
+                alt="Image de Kirby"
+                target="_blank"
+              />
+              <!--Crédit kirby : https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Kirby_Nintendo.png/255px-Kirby_Nintendo.png-->
+              <p class="description_personnages_iconiques">
+                Kirby est un adorable personnage rose et rond créé par Nintendo
+                et HAL Laboratory, qui est apparu pour la première fois dans
+                Kirby's Dream Land en 1992. Ce petit héros a la capacité unique
+                d’inhaler ses ennemis et de copier leurs pouvoirs, ce qui lui
+                permet de s’adapter à diverses situations d'aventure. Kirby vit
+                dans le paisible royaume de Dream Land sur la planète Popstar,
+                où il protège ses amis des menaces souvent initiées par le
+                vilain Roi DaDiDou. Grâce à son charme et à son gameplay
+                innovant, la série Kirby est devenue une franchise bien-aimée du
+                jeu vidéo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br />
+
+      <section>
+        <div class="section_vidéo_documentaire">
+          <h2>Vidéo documentaire :</h2>
+          <iframe
+            width="700"
+            height="415"
+            src="https://www.youtube.com/embed/iBWNj0-xJvk?si=LoEpalALdMI5UM00"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <br />
+    </main>
+    <footer class="example-1">
+      <div class="footer-container">
+        <div class="footer-col">
+          <div class="centrage-footer">
+            <h4>Lieu :</h4>
+            <br />
+            <p>Voici l'adresse pour nous rejoindres :</p>
+            <br />
+          </div>
+        </div>
+        <!--                              2eme categorie du footer (  du milieu  )                     -->
+        <div class="centrage-footer">
+          <div class="footer-col">
+            <h4>Contact options :</h4>
+            <br />
+
+            <p class="alignement-logo-texte">
+              <img class="taille-icon" src="images/logo-gmail.png" />
+              &nbsp; Notre : &nbsp;
+              <a class="souligné-ref" href="super.email@example.com">Email</a>
+            </p>
+            <br />
+
+            <p class="alignement-logo-texte">
+              <img class="taille-icon" src="images/logo-whatsapp.png" />
+              &nbsp; Voici : &nbsp;
+              <a class="souligné-ref" href="tel:+31 0605050606"> Téléphone</a>
+            </p>
+            <br />
+
+            <p class="alignement-logo-texte">
+              <svg
+                class="taille-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="#74C0FC"
+                  d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"
+                />
+              </svg>
+              &nbsp; Notre : &nbsp;
+              <a class="souligné-ref" href="https://fr-fr.facebook.com/">
+                Facebook</a
+              >
+            </p>
+            <br />
+
+            <p class="alignement-logo-texte">
+              <img class="taille-icon" src="images/logo-instagram.png" />
+              &nbsp; Voici : &nbsp;
+              <a class="souligné-ref" href="https://www.instagram.com/"
+                >Instagram</a
+              >
+            </p>
+          </div>
+        </div>
+        <!--                       derniere categorie du footer (  sitemap  )            -->
+        <div class="centrage-footer">
+          <div class="footer-col">
+            <h4>Sitemap :</h4>
+            <br />
+            <div class="decalage-footer">
+              <ul>
+                <li>
+                  <a href="tournoi.html">Tournois</a>
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-tournoi.png"
+                  />
+                </li>
+
+                <li>
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-exposition.png"
+                  />
+                  <a href="expo.html">Exposition de Consoles Rétro</a>
+                </li>
+
+                <li>
+                  <a href="Histoire_de_nintendo_index.html"
+                    >Histoire de Nintendo</a
+                  >
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-histoire.png"
+                  />
+                </li>
+
+                <li>
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-rencontre.png"
+                  />
+                  <a href="rencontre_Shigeru_Miyamoto.html"
+                    >Rencontre avec Shigeru Miyamoto</a
+                  >
+                </li>
+
+                <li>
+                  <a href="ateliers_et_activités.html">Ateliers et Activités</a>
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-atelier.png"
+                  />
+                </li>
+
+                <li>
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-programme.png"
+                  />
+                  <a href="programme_du_festival.html">Programme du Festival</a>
+                </li>
+
+                <li>
+                  <a href="partenaires_et_sponsors.html"
+                    >Partenaires et Sponsors</a
+                  >
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-investisseur.png"
+                  />
+                </li>
+
+                <li>
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-boutique.png"
+                  />
+                  <a href="boutique_de_produits_dérivés"
+                    >Boutique de Produits Dérivés</a
+                  >
+                </li>
+
+                <li>
+                  <a href="accréditation_presse_et_média.html"
+                    >Accréditations Presse et Médias</a
+                  >
+                  <img
+                    class="taille-dernier-footer"
+                    src="images/logo-media.png"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottombar">
+        Copyright © 2024 - Back to Pixels /
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+    </footer>
+  </body>
+</html>
