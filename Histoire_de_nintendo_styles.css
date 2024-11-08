@@ -6,6 +6,10 @@ body {
   color: #ffffff;
 }
 
+p{
+  font-family: Roboto, sans-serif;
+}
+
 h2 {
   font-family: "Press Start 2P", sans-serif;
 }
