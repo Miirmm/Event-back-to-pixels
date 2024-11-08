@@ -3,6 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+
     <title>Accueil</title>
     <link rel="stylesheet" href="index.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +19,6 @@
     </style>
 </head>
 <body >
-
 <header>
     <div class="navbar">
         <a class="logo">
@@ -29,9 +30,13 @@
             <li class="rendu-plus-gros">
                 <a href="expo.html">Exposition de Consoles Rétro</a>
             </li>
-            <li class="rendu-plus-gros"><a href="Histoire_de_nintendo_index.html">Histoire de Nintendo</a></li>
             <li class="rendu-plus-gros">
-                <a href="rencontre_Shigeru_Miyamoto.html">Rencontre avec Shigeru Miyamoto</a>
+                <a href="Histoire_de_nintendo_index.html">Histoire de Nintendo</a>
+            </li>
+            <li class="rendu-plus-gros">
+                <a href="rencontre_Shigeru_Miyamoto.html"
+                >Rencontre avec Shigeru Miyamoto</a
+                >
             </li>
 
             <ul class="liste-deroulante">
@@ -39,11 +44,25 @@
                     <a href="#">Autres ⬇</a>
                 </li>
                 <ul class="submenu">
-                    <li><a href="ateliers_et_activités.html">Ateliers et Activités</a></li>
-                    <li><a href="programme_du_festival.html">Programme du Festival</a></li>
-                    <li><a href="partenaires_et_sponsors.html">Partenaires et Sponsors</a></li>
-                    <li><a href="boutique_de_produits_dérivés.html">Boutique de produits Dérivés</a></li>
-                    <li><a href="accréditation_presse_et_médias.html">Presse et Média</a></li>
+                    <li>
+                        <a href="ateliers_et_activités.html">Ateliers et Activités</a>
+                    </li>
+                    <li>
+                        <a href="programme_du_festival.html">Programme du Festival</a>
+                    </li>
+                    <li>
+                        <a href="partenaires_et_sponsors.html"
+                        >Partenaires et Sponsors</a
+                        >
+                    </li>
+                    <li>
+                        <a href="boutique_de_produits_dérivés"
+                        >Boutique de produits Dérivés</a
+                        >
+                    </li>
+                    <li>
+                        <a href="accréditation_presse_et_média.html">Presse et Média</a>
+                    </li>
                 </ul>
             </ul>
         </ul>
@@ -55,23 +74,43 @@
         <ul class="links">
             <li><a href="tournoi.html">Tournois</a></li>
             <li><a href="expo.html">Exposition de Consoles Rétro</a></li>
-            <li><a href="Histoire_de_nintendo_index.html">Histoire de Nintendo</a></li>
-            <li><a href="rencontre_Shigeru_Miyamoto.html">Rencontre avec Shigeru Miyamoto</a></li>
+            <li>
+                <a href="Histoire_de_nintendo_index.html">Histoire de Nintendo</a>
+            </li>
+            <li>
+                <a href="rencontre_Shigeru_Miyamoto.html"
+                >Rencontre avec Shigeru Miyamoto</a
+                >
+            </li>
             <input type="checkbox" class="menuToggle" id="menu-toggle" />
             <li id="lol">Autres</li>
 
             <ul class="liste-deroulante" id="toDisplay">
                 <!-- <label for="#">Autres</label> -->
 
-                <li><a href="ateliers_et_activités.html">Ateliers et Activités</a></li>
-                <li><a href="programme_du_festival.html">Programme du Festival</a></li>
-                <li><a href="partenaires_et_sponsors.html">Partenaires et Sponsors</a></li>
-                <li><a href="boutique_de_produits_dérivés.html">Boutique de produits Dérivés</a></li>
-                <li><a href="accréditation_presse_et_médias.html">Presse et Média</a></li>
+                <li>
+                    <a href="ateliers_et_activités.html">Ateliers et Activités</a>
+                </li>
+                <li>
+                    <a href="programme_du_festival.html">Programme du Festival</a>
+                </li>
+                <li>
+                    <a href="partenaires_et_sponsors.html">Partenaires et Sponsors</a>
+                </li>
+                <li>
+                    <a href="boutique_de_produits_dérivés"
+                    >Boutique de produits Dérivés</a
+                    >
+                </li>
+                <li>
+                    <a href="accréditation_presse_et_média.html">Presse et Média</a>
+                </li>
             </ul>
             <div class="divider"></div>
         </ul>
     </div>
+    <div class="padding-pour-test"></div>
+</header>
 
 </header>
 
@@ -88,7 +127,7 @@
     burgerMenuButton.onclick = function () {
         burgerMenu.classList.toggle("open");
         const isOpen = burgerMenu.classList.contains("open");
-        burgerMenuButtonIcon.classList = isOpen
+         burgerMenuButtonIcon.classList = isOpen
             ? "fa-solid fa-xmark"
             : "fa-solid fa-bars";
     };
