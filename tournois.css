@@ -344,7 +344,7 @@ input[type="checkbox"]:checked + label + .text {
 }
 
 .jolie h1{
-    margin: 10% 5% 20% 5%;
+    margin: 10% 5% 0 5%;
     font-size: 50px;
     text-align: center;
     color: white;
@@ -355,13 +355,79 @@ input[type="checkbox"]:checked + label + .text {
     text-transform: uppercase;
 }
 
-.jolie button{
-   margin-bottom: 100px;
-   height: 50px;
-   width: 200px;
+.box {
+    margin: auto 0;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5%;
 }
 
+.glow-on-hover {
+    border: none;
+    outline: none;
+    color: var(--text);
+    background: black;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 1rem 2rem 1rem 2rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
 
+.glow-on-hover:hover {
+    background: transparent;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: var(--background);
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+    z-index: 2;
+}
+
+.hover-color {
+    z-index: 999;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
 
 
 /**************************************************************************************************************************/
@@ -776,6 +842,8 @@ footer.example-1 .bottombar {
 
 
 @media screen and (max-width: 1023px) {
+
+
     h2{
         text-decoration: underline;
         margin-top: 100px;
@@ -784,6 +852,10 @@ footer.example-1 .bottombar {
 
     .jolie{
         width: 100%;
+    }
+
+    .box{
+        margin-bottom: 0;
     }
 
     .jeux-tournoi{
@@ -877,6 +949,7 @@ footer.example-1 .bottombar {
 
 
 @media screen and (max-width: 767px) {
+
     h2{
         text-decoration: underline;
         margin-top: 100px;
@@ -885,6 +958,10 @@ footer.example-1 .bottombar {
 
     .jolie{
         width: 100%;
+    }
+
+    .box{
+        margin-bottom: 0;
     }
 
     .bloc-jeu{
@@ -978,5 +1055,18 @@ footer.example-1 .bottombar {
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
+    }
+}
+
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
     }
 }
