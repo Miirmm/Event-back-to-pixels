@@ -1,7 +1,7 @@
 body {
 	height: 100vh;
 	background-attachment: fixed; 
-	background-color: #3989cb;
+	background-image: url(https://www.hdwallpapers.in/download/neon_retro_cityscape_4k-HD.jpg);
 	background-size: cover;
 	background-position: center;
     margin: 0;
@@ -267,7 +267,7 @@ ul .submenu {
 	text-align: center;	
 	border-style: solid; 
 	border-width: 50px;
-	border-image-source: url(images/se-connecter-bordure.png);
+	border-image-source: url(se-connecter-bordure.png);
 	border-image-slice: 300 150 300 150; /* haut | droit | bas | gauche */
 	border-image-width: 50px;
 	color: red ;
@@ -292,7 +292,7 @@ input[type="checkbox"] {
 	margin: 3em;
 	color: var(--secondary);
 	color: #121212;
-	background-image: url(images/fond-se-connecter.jpg);
+	background-image: url(fond-se-connecter.jpg);
 	height: 200px;
 	padding-top: 20px;
   }
@@ -433,6 +433,7 @@ footer.example-1 {
     width: 75%;
     height: 1780px;
     background-color: darkblue;
+	opacity: 0.9;
     color: rgb(255, 0, 0);
     text-align: center;
     
@@ -458,6 +459,7 @@ footer.example-1 {
 
 .lien-libre-de-droit {
     text-decoration: underline;
+	background-color: #63C7B2;
 }
 
 
