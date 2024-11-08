@@ -281,6 +281,10 @@ footer p{
   }
 
 
+  .nom_personnages_iconiques{
+    font-size: 2rem;
+  }
+
    .description_personnages_iconiques{
     text-align: left;
     width: 90%;
